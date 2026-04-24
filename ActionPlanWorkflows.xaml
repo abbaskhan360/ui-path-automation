@@ -1,0 +1,668 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateIssueManagementTicket" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_BrowserSession" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <this:CreateIssueManagementTicket.in_BrowserSession>
+    <InArgument x:TypeArguments="ui:UiElement" />
+  </this:CreateIssueManagementTicket.in_BrowserSession>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>CreateIssueManagementTicket_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft.Win32.SafeHandles</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Configuration.Assemblies</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.CodeDom.Compiler</x:String>
+      <x:String>System.Buffers</x:String>
+      <x:String>System.Buffers.Text</x:String>
+      <x:String>System.Buffers.Binary</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>System.Threading.Tasks.Sources</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Unicode</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Security.Principal</x:String>
+      <x:String>System.Security.Permissions</x:String>
+      <x:String>System.Security.Cryptography</x:String>
+      <x:String>System.Runtime</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.Remoting</x:String>
+      <x:String>System.Runtime.ExceptionServices</x:String>
+      <x:String>System.Runtime.ConstrainedExecution</x:String>
+      <x:String>System.Runtime.Versioning</x:String>
+      <x:String>System.Runtime.Loader</x:String>
+      <x:String>System.Runtime.Intrinsics</x:String>
+      <x:String>System.Runtime.Intrinsics.Wasm</x:String>
+      <x:String>System.Runtime.Intrinsics.Arm</x:String>
+      <x:String>System.Runtime.Intrinsics.X86</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.InteropServices.ObjectiveC</x:String>
+      <x:String>System.Runtime.InteropServices.Marshalling</x:String>
+      <x:String>System.Runtime.InteropServices.ComTypes</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Resources</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Reflection.Metadata</x:String>
+      <x:String>System.Reflection.Emit</x:String>
+      <x:String>System.IO.Enumeration</x:String>
+      <x:String>System.Diagnostics.SymbolStore</x:String>
+      <x:String>System.Diagnostics.Contracts</x:String>
+      <x:String>System.Diagnostics.CodeAnalysis</x:String>
+      <x:String>System.Diagnostics.Tracing</x:String>
+      <x:String>System.Collections.Concurrent</x:String>
+      <x:String>Internal</x:String>
+      <x:String>System.CodeDom</x:String>
+      <x:String>Microsoft.CSharp</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Linq.Expressions.Interpreter</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Workflow.Runtime</x:String>
+      <x:String>System.Activities.Tracking</x:String>
+      <x:String>System.Activities.Statements.Tracking</x:String>
+      <x:String>System.Activities.Runtime</x:String>
+      <x:String>System.Activities.Runtime.DurableInstancing</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.ParallelTracking</x:String>
+      <x:String>System.Activities.Hosting</x:String>
+      <x:String>System.Activities.Persistence</x:String>
+      <x:String>System.Activities.DurableInstancing</x:String>
+      <x:String>System.ComponentModel.Design.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security.Authentication.ExtendedProtection</x:String>
+      <x:String>System.Timers</x:String>
+      <x:String>System.ComponentModel.Design</x:String>
+      <x:String>System.Xml.Schema</x:String>
+      <x:String>System.Xml.Xsl</x:String>
+      <x:String>System.Xml.Xsl.Runtime</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Xml.Resolvers</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.FileIO</x:String>
+      <x:String>System.Security.Authentication</x:String>
+      <x:String>System.Net.Cache</x:String>
+      <x:String>System.Net.NetworkInformation</x:String>
+      <x:String>System.Net.Security</x:String>
+      <x:String>System.Net.Sockets</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Semantic.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Testing.Enums</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>System.Net.NetworkInformation</AssemblyReference>
+      <AssemblyReference>System.Net.Ping</AssemblyReference>
+      <AssemblyReference>System.Net.Sockets</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="736.4000000000001,2758.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
+      <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:Boolean" Name="urlMatchResult" />
+      <Variable x:TypeArguments="x:Boolean" Name="textMatchResult" />
+      <Variable x:TypeArguments="ui:UiElement" Name="out_BrowserSession" />
+      <Variable x:TypeArguments="x:String" Name="currentUrl" />
+      <Variable x:TypeArguments="x:Boolean" Name="testMatchResult" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Predict 360" sap:VirtualizedContainerService.HintSize="451.2,2735.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" ScopeGuid="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2541.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Delay DisplayName="Delay" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_14">
+              <InArgument x:TypeArguments="x:TimeSpan">
+                <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_132" Value="00:00:08" />
+              </InArgument>
+            </Delay>
+            <uix:NClick DisplayName="Click ''Start Progress''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_13" ScopeIdentifier="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V5">
+              <uix:NClick.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_138" Value="True" />
+                </InArgument>
+              </uix:NClick.ActivateBefore>
+              <uix:NClick.ClickType>
+                <InArgument x:TypeArguments="uix:NClickType">
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_136" />
+                </InArgument>
+              </uix:NClick.ClickType>
+              <uix:NClick.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_140" />
+                </InArgument>
+              </uix:NClick.HealingAgentBehavior>
+              <uix:NClick.InteractionMode>
+                <InArgument x:TypeArguments="uix:NChildInteractionMode">
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_139" />
+                </InArgument>
+              </uix:NClick.InteractionMode>
+              <uix:NClick.KeyModifiers>
+                <InArgument x:TypeArguments="uix:NKeyModifiers">
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_135" />
+                </InArgument>
+              </uix:NClick.KeyModifiers>
+              <uix:NClick.MouseButton>
+                <InArgument x:TypeArguments="uix:NMouseButton">
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_137" />
+                </InArgument>
+              </uix:NClick.MouseButton>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="855, 381, 107, 23" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="650c19a8-09cf-4850-a88f-85d1cda4a889" InformativeScreenshot="f96b1a2b89bce84c44b2286ed6041c98.jpg" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_166" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_168">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl parentid='action_id_11' tag='SPAN' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_169">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl parentid='action_id_11' tag='SPAN' type='' class='trigger-label' aaname='Start Progress' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Start Progress' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_167">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay DisplayName="Delay" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_15">
+              <InArgument x:TypeArguments="x:TimeSpan">
+                <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_141" Value="00:00:04" />
+              </InArgument>
+            </Delay>
+            <uix:NGetText DisplayName="Get Text ''In Progress''" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V5">
+              <uix:NGetText.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_142" />
+                </InArgument>
+              </uix:NGetText.HealingAgentBehavior>
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="903, 467, 117, 30" DesignTimeScaleFactor="1.25" Guid="328c9411-e787-42a1-b6bb-3fcc998e6613" InformativeScreenshot="8d3274826f4cfa17db9029cea5c8168c.jpg" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_170" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_172">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='status-val' tag='SPAN' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_173">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='status-val' tag='SPAN' type='' class='value' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_171">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="variable1" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_10" />
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <ui:IsMatch DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="IsMatch_15" IsBuilderTabModified="False" RegexOption="IgnoreCase, Compiled">
+              <ui:IsMatch.Input>
+                <InArgument x:TypeArguments="x:String">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="If(String.IsNullOrEmpty(variable1), &quot;N/A&quot;, variable1)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_10" />
+                </InArgument>
+              </ui:IsMatch.Input>
+              <ui:IsMatch.Pattern>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_143">In Progress</Literal>
+                </InArgument>
+              </ui:IsMatch.Pattern>
+            </ui:IsMatch>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Action Plan Status Changed to: In Process&quot;]" />
+            <uix:NClick DisplayName="Click ''Submit for Closure''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_14" ScopeIdentifier="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V5">
+              <uix:NClick.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_147" Value="True" />
+                </InArgument>
+              </uix:NClick.ActivateBefore>
+              <uix:NClick.ClickType>
+                <InArgument x:TypeArguments="uix:NClickType">
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_145" />
+                </InArgument>
+              </uix:NClick.ClickType>
+              <uix:NClick.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_149" />
+                </InArgument>
+              </uix:NClick.HealingAgentBehavior>
+              <uix:NClick.InteractionMode>
+                <InArgument x:TypeArguments="uix:NChildInteractionMode">
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_148" />
+                </InArgument>
+              </uix:NClick.InteractionMode>
+              <uix:NClick.KeyModifiers>
+                <InArgument x:TypeArguments="uix:NKeyModifiers">
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_144" />
+                </InArgument>
+              </uix:NClick.KeyModifiers>
+              <uix:NClick.MouseButton>
+                <InArgument x:TypeArguments="uix:NMouseButton">
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_146" />
+                </InArgument>
+              </uix:NClick.MouseButton>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="855, 381, 144, 23" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="c9d6fb66-b21f-4a18-95e2-163c83263a21" InformativeScreenshot="0e98f0fb44543a954a29d45f4d76e918.jpg" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_174" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_176">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl parentid='action_id_41' tag='SPAN' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_177">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl parentid='action_id_41' tag='SPAN' type='' class='trigger-label' aaname='Submit for Closure' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Submit for Closure' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_175">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay DisplayName="Delay" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_16">
+              <InArgument x:TypeArguments="x:TimeSpan">
+                <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_150" Value="00:00:04" />
+              </InArgument>
+            </Delay>
+            <uix:NGetText DisplayName="Get Text ''Submitted for Closure''" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V5">
+              <uix:NGetText.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_151" />
+                </InArgument>
+              </uix:NGetText.HealingAgentBehavior>
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="903, 467, 200, 30" DesignTimeScaleFactor="1.25" Guid="0cd044e8-7314-480d-bb61-4618c6e1858a" InformativeScreenshot="49f1e6de8aeb1a289f763c9a09ac5b50.jpg" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_178" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_180">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='status-val' tag='SPAN' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_181">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='status-val' tag='SPAN' type='' class='value' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_179">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="variable1" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_11" />
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <ui:IsMatch DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="IsMatch_16" IsBuilderTabModified="False" RegexOption="IgnoreCase, Compiled">
+              <ui:IsMatch.Input>
+                <InArgument x:TypeArguments="x:String">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="If(String.IsNullOrEmpty(variable1), &quot;N/A&quot;, variable1)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_11" />
+                </InArgument>
+              </ui:IsMatch.Input>
+              <ui:IsMatch.Pattern>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_152">Submitted for Closure</Literal>
+                </InArgument>
+              </ui:IsMatch.Pattern>
+            </ui:IsMatch>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Action Plan Status Changed to: &quot;+variable1]" />
+            <uix:NClick DisplayName="Click ''Accept and Close''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_15" ScopeIdentifier="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V5">
+              <uix:NClick.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_156" Value="True" />
+                </InArgument>
+              </uix:NClick.ActivateBefore>
+              <uix:NClick.ClickType>
+                <InArgument x:TypeArguments="uix:NClickType">
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_154" />
+                </InArgument>
+              </uix:NClick.ClickType>
+              <uix:NClick.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_158" />
+                </InArgument>
+              </uix:NClick.HealingAgentBehavior>
+              <uix:NClick.InteractionMode>
+                <InArgument x:TypeArguments="uix:NChildInteractionMode">
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_157" />
+                </InArgument>
+              </uix:NClick.InteractionMode>
+              <uix:NClick.KeyModifiers>
+                <InArgument x:TypeArguments="uix:NKeyModifiers">
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_153" />
+                </InArgument>
+              </uix:NClick.KeyModifiers>
+              <uix:NClick.MouseButton>
+                <InArgument x:TypeArguments="uix:NMouseButton">
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_155" />
+                </InArgument>
+              </uix:NClick.MouseButton>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="855, 381, 134, 23" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="90f38245-9c66-4f57-8e7f-8b77ec743c62" InformativeScreenshot="1e47ecdc4b909957191217f14db783e0.jpg" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_182" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_184">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl parentid='action_id_71' tag='SPAN' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_185">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl parentid='action_id_71' tag='SPAN' type='' class='trigger-label' aaname='Accept and Close' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Accept and Close' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_183">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Accept(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" ContentHash="4cg3Peim_kyUlCr1NGdcIA" DesignTimeRectangle="1364, 783, 79, 38" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='issue-workflow-transition-submit' tag='INPUT' /&gt;" Guid="9dd519d8-57f2-46bd-9f86-c143d59be6fc" InformativeScreenshot="ba2510611add9d69a7db71c1d229ebdf.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/A2i9WvsuhUuVcZ0McgLA5Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay DisplayName="Delay" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_17">
+              <InArgument x:TypeArguments="x:TimeSpan">
+                <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_159" Value="00:00:05" />
+              </InArgument>
+            </Delay>
+            <uix:NGetText DisplayName="Get Text ''Closed''" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V5">
+              <uix:NGetText.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_160" />
+                </InArgument>
+              </uix:NGetText.HealingAgentBehavior>
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="903, 467, 83, 30" DesignTimeScaleFactor="1.25" Guid="9aba67bc-fcbd-4e22-982d-d017b4364ccc" InformativeScreenshot="84138fb4937bfb73c77aa6d8e5630299.jpg" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_186" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_188">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='status-val' tag='SPAN' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_189">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='status-val' tag='SPAN' type='' class='value' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_187">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="variable1" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_12" />
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <ui:IsMatch DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="IsMatch_17" IsBuilderTabModified="False" RegexOption="IgnoreCase, Compiled">
+              <ui:IsMatch.Input>
+                <InArgument x:TypeArguments="x:String">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="If(String.IsNullOrEmpty(variable1), &quot;N/A&quot;, variable1)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_12" />
+                </InArgument>
+              </ui:IsMatch.Input>
+              <ui:IsMatch.Pattern>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_161">Closed</Literal>
+                </InArgument>
+              </ui:IsMatch.Pattern>
+            </ui:IsMatch>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Action Plan Status Changed to: &quot;+variable1]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.CloseMode>
+        <InArgument x:TypeArguments="uix:NAppCloseMode">
+          <Literal x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="Literal`1_128" />
+        </InArgument>
+      </uix:NApplicationCard.CloseMode>
+      <uix:NApplicationCard.HealingAgentBehavior>
+        <InArgument x:TypeArguments="uix:NHealingAgentBehavior">
+          <Literal x:TypeArguments="uix:NHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_129" />
+        </InArgument>
+      </uix:NApplicationCard.HealingAgentBehavior>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.OpenMode>
+        <InArgument x:TypeArguments="uix:NAppOpenMode">
+          <Literal x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="Literal`1_127" Value="IfNotOpen" />
+        </InArgument>
+      </uix:NApplicationCard.OpenMode>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="d297dc33e346b1113dd038ad7065b48b.jpg" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_130">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+            </InArgument>
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_131">https://stage.360factors.com/predict360/casemanagement.do</Literal>
+            </InArgument>
+          </uix:TargetApp.Url>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

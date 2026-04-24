@@ -1,0 +1,6 @@
+{
+  "Name": "IssueManagement",
+  "ProjectType": "Process",
+  "Description": "IssueManagementWorkflows",
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,737 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathAdditionalEventData" Type="InArgument(x:String)" />
+    <x:Property Name="out_BrowserSession" Type="OutArgument(ui:UiElement)" />
+  </x:Members>
+  <this:Login.UiPathEventConnector>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Login.UiPathEventConnector>
+  <this:Login.UiPathEvent>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Login.UiPathEvent>
+  <this:Login.UiPathEventObjectType>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Login.UiPathEventObjectType>
+  <this:Login.UiPathEventObjectId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Login.UiPathEventObjectId>
+  <this:Login.UiPathAdditionalEventData>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Login.UiPathAdditionalEventData>
+  <this:Login.out_BrowserSession>
+    <OutArgument x:TypeArguments="ui:UiElement" />
+  </this:Login.out_BrowserSession>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft.Win32.SafeHandles</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Configuration.Assemblies</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.CodeDom.Compiler</x:String>
+      <x:String>System.Buffers</x:String>
+      <x:String>System.Buffers.Text</x:String>
+      <x:String>System.Buffers.Binary</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>System.Threading.Tasks.Sources</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Unicode</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Security.Principal</x:String>
+      <x:String>System.Security.Permissions</x:String>
+      <x:String>System.Security.Cryptography</x:String>
+      <x:String>System.Runtime</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.Remoting</x:String>
+      <x:String>System.Runtime.ExceptionServices</x:String>
+      <x:String>System.Runtime.ConstrainedExecution</x:String>
+      <x:String>System.Runtime.Versioning</x:String>
+      <x:String>System.Runtime.Loader</x:String>
+      <x:String>System.Runtime.Intrinsics</x:String>
+      <x:String>System.Runtime.Intrinsics.Wasm</x:String>
+      <x:String>System.Runtime.Intrinsics.Arm</x:String>
+      <x:String>System.Runtime.Intrinsics.X86</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.InteropServices.ObjectiveC</x:String>
+      <x:String>System.Runtime.InteropServices.Marshalling</x:String>
+      <x:String>System.Runtime.InteropServices.ComTypes</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Resources</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Reflection.Metadata</x:String>
+      <x:String>System.Reflection.Emit</x:String>
+      <x:String>System.IO.Enumeration</x:String>
+      <x:String>System.Diagnostics.SymbolStore</x:String>
+      <x:String>System.Diagnostics.Contracts</x:String>
+      <x:String>System.Diagnostics.CodeAnalysis</x:String>
+      <x:String>System.Diagnostics.Tracing</x:String>
+      <x:String>System.Collections.Concurrent</x:String>
+      <x:String>Internal</x:String>
+      <x:String>System.CodeDom</x:String>
+      <x:String>Microsoft.CSharp</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Linq.Expressions.Interpreter</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Workflow.Runtime</x:String>
+      <x:String>System.Activities.Tracking</x:String>
+      <x:String>System.Activities.Statements.Tracking</x:String>
+      <x:String>System.Activities.Runtime</x:String>
+      <x:String>System.Activities.Runtime.DurableInstancing</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.ParallelTracking</x:String>
+      <x:String>System.Activities.Hosting</x:String>
+      <x:String>System.Activities.Persistence</x:String>
+      <x:String>System.Activities.DurableInstancing</x:String>
+      <x:String>System.ComponentModel.Design.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security.Authentication.ExtendedProtection</x:String>
+      <x:String>System.Timers</x:String>
+      <x:String>System.ComponentModel.Design</x:String>
+      <x:String>System.Xml.Schema</x:String>
+      <x:String>System.Xml.Xsl</x:String>
+      <x:String>System.Xml.Xsl.Runtime</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Xml.Resolvers</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.FileIO</x:String>
+      <x:String>System.Security.Authentication</x:String>
+      <x:String>System.Net.Cache</x:String>
+      <x:String>System.Net.NetworkInformation</x:String>
+      <x:String>System.Net.Security</x:String>
+      <x:String>System.Net.Sockets</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>System.Net.NetworkInformation</AssemblyReference>
+      <AssemblyReference>System.Net.Ping</AssemblyReference>
+      <AssemblyReference>System.Net.Sockets</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="686.8000000000001,2543.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="urlMatchResult" />
+      <Variable x:TypeArguments="x:Boolean" Name="textMatchResult" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="ui:UiElement" Name="browserElement" />
+      <Variable x:TypeArguments="x:String" Name="currentUrl" />
+      <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
+      <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
+      <Variable x:TypeArguments="ui:UiElement" Name="in_BrowserSession" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="459.2,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_11" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" sap:VirtualizedContainerService.HintSize="459.2,2276" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="DebuggerApi" ScopeGuid="d4ce581e-3ab6-4bf4-b3ef-0f8075f10a8f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="457.6,2073.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto DisplayName="Type the username into the username field." sap:VirtualizedContainerService.HintSize="424,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_31" ScopeIdentifier="d4ce581e-3ab6-4bf4-b3ef-0f8075f10a8f" Version="V5">
+              <uix:NTypeInto.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_78" Value="True" />
+                </InArgument>
+              </uix:NTypeInto.ActivateBefore>
+              <uix:NTypeInto.ClickBeforeMode>
+                <InArgument x:TypeArguments="uix:NClickMode">
+                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_79" Value="Single" />
+                </InArgument>
+              </uix:NTypeInto.ClickBeforeMode>
+              <uix:NTypeInto.ClipboardMode>
+                <InArgument x:TypeArguments="uix:NTypeByClipboardMode">
+                  <Literal x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="Literal`1_81" />
+                </InArgument>
+              </uix:NTypeInto.ClipboardMode>
+              <uix:NTypeInto.EmptyFieldMode>
+                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_80" Value="SingleLine" />
+                </InArgument>
+              </uix:NTypeInto.EmptyFieldMode>
+              <uix:NTypeInto.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_83" />
+                </InArgument>
+              </uix:NTypeInto.HealingAgentBehavior>
+              <uix:NTypeInto.InteractionMode>
+                <InArgument x:TypeArguments="uix:NChildInteractionMode">
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_82" />
+                </InArgument>
+              </uix:NTypeInto.InteractionMode>
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="qa.360factors.com/predict360/login.do" ContentHash="aCK99M7eJEqPGMI2cIIlHg" DesignTimeRectangle="97, 292, 517, 58" ElementType="InputBox" Guid="732a5fff-f32e-41fc-bfe9-d66bcbd625d1" InformativeScreenshot="ba53a59522960fc5b61ebf46bc366d77.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/KEi9dWhYYESY31yb99XUoQ" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_112" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_115">&lt;webctrl id='username' tag='INPUT' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_113">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                  <uix:TargetAnchorable.WaitForReadyArgument>
+                    <InArgument x:TypeArguments="uix:NWaitForReady">
+                      <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_114" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.WaitForReadyArgument>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_77">cmsautomationuser001</Literal>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions IsLoose="True" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="qa.360factors.com/predict360/login.do" ContentHash="aCK99M7eJEqPGMI2cIIlHg" DesignTimeRectangle="97, 292, 517, 58" ElementType="InputBox" Guid="732a5fff-f32e-41fc-bfe9-d66bcbd625d1" InformativeScreenshot="ba53a59522960fc5b61ebf46bc366d77.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/KEi9dWhYYESY31yb99XUoQ" SearchSteps="Selector" Version="V6">
+                      <uix:TargetAnchorable.ElementVisibilityArgument>
+                        <InArgument x:TypeArguments="uix:NElementVisibility">
+                          <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_132" Value="Interactive" />
+                        </InArgument>
+                      </uix:TargetAnchorable.ElementVisibilityArgument>
+                      <uix:TargetAnchorable.FullSelectorArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_135">&lt;webctrl id='username' tag='INPUT' /&gt;</Literal>
+                        </InArgument>
+                      </uix:TargetAnchorable.FullSelectorArgument>
+                      <uix:TargetAnchorable.ScopeSelectorArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_133">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                        </InArgument>
+                      </uix:TargetAnchorable.ScopeSelectorArgument>
+                      <uix:TargetAnchorable.WaitForReadyArgument>
+                        <InArgument x:TypeArguments="uix:NWaitForReady">
+                          <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_134" Value="Interactive" />
+                        </InArgument>
+                      </uix:TargetAnchorable.WaitForReadyArgument>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionTypeIntoOptions.Target>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto DisplayName="Type the password into the password field." sap:VirtualizedContainerService.HintSize="424,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_32" ScopeIdentifier="d4ce581e-3ab6-4bf4-b3ef-0f8075f10a8f" Version="V5">
+              <uix:NTypeInto.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_85" Value="True" />
+                </InArgument>
+              </uix:NTypeInto.ActivateBefore>
+              <uix:NTypeInto.ClickBeforeMode>
+                <InArgument x:TypeArguments="uix:NClickMode">
+                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_86" Value="Single" />
+                </InArgument>
+              </uix:NTypeInto.ClickBeforeMode>
+              <uix:NTypeInto.ClipboardMode>
+                <InArgument x:TypeArguments="uix:NTypeByClipboardMode">
+                  <Literal x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="Literal`1_88" />
+                </InArgument>
+              </uix:NTypeInto.ClipboardMode>
+              <uix:NTypeInto.EmptyFieldMode>
+                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_87" Value="SingleLine" />
+                </InArgument>
+              </uix:NTypeInto.EmptyFieldMode>
+              <uix:NTypeInto.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_90" />
+                </InArgument>
+              </uix:NTypeInto.HealingAgentBehavior>
+              <uix:NTypeInto.InteractionMode>
+                <InArgument x:TypeArguments="uix:NChildInteractionMode">
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_89" />
+                </InArgument>
+              </uix:NTypeInto.InteractionMode>
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/login.do" ContentHash="eRpEmxsIeEyQJnYmsk6Sew" DesignTimeRectangle="97, 462, 552, 58" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" Guid="60e4ea0a-6033-49fb-9d00-e45293e7b701" InformativeScreenshot="4b4dbbba4ad129abaea32943246e2ad9.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/p92nn-TuKk2jOqc0GgWUBQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_84">Test12345</Literal>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/login.do" ContentHash="eRpEmxsIeEyQJnYmsk6Sew" DesignTimeRectangle="97, 462, 552, 58" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" Guid="60e4ea0a-6033-49fb-9d00-e45293e7b701" InformativeScreenshot="4b4dbbba4ad129abaea32943246e2ad9.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/p92nn-TuKk2jOqc0GgWUBQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionTypeIntoOptions.Target>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto DisplayName="Type the customer key into the customer key field." sap:VirtualizedContainerService.HintSize="424,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_33" ScopeIdentifier="d4ce581e-3ab6-4bf4-b3ef-0f8075f10a8f" Version="V5">
+              <uix:NTypeInto.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_92" Value="True" />
+                </InArgument>
+              </uix:NTypeInto.ActivateBefore>
+              <uix:NTypeInto.ClickBeforeMode>
+                <InArgument x:TypeArguments="uix:NClickMode">
+                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_93" Value="Single" />
+                </InArgument>
+              </uix:NTypeInto.ClickBeforeMode>
+              <uix:NTypeInto.ClipboardMode>
+                <InArgument x:TypeArguments="uix:NTypeByClipboardMode">
+                  <Literal x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="Literal`1_95" />
+                </InArgument>
+              </uix:NTypeInto.ClipboardMode>
+              <uix:NTypeInto.EmptyFieldMode>
+                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_94" Value="SingleLine" />
+                </InArgument>
+              </uix:NTypeInto.EmptyFieldMode>
+              <uix:NTypeInto.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_97" />
+                </InArgument>
+              </uix:NTypeInto.HealingAgentBehavior>
+              <uix:NTypeInto.InteractionMode>
+                <InArgument x:TypeArguments="uix:NChildInteractionMode">
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_96" />
+                </InArgument>
+              </uix:NTypeInto.InteractionMode>
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="qa.360factors.com/predict360/login.do" ContentHash="74n50Dzt2kqZMUqz-QDF5A" DesignTimeRectangle="97, 654, 532, 57" ElementType="InputBox" Guid="6ec05398-b274-4e2b-80f3-226a9c645f8c" InformativeScreenshot="bd9580db17ef90fad2363a57408d39d9.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/FBUqmTIEO0SFnOVdIe2YDA" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_120" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_123">&lt;webctrl id='customerKey' tag='INPUT' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_121">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                  <uix:TargetAnchorable.WaitForReadyArgument>
+                    <InArgument x:TypeArguments="uix:NWaitForReady">
+                      <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_122" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.WaitForReadyArgument>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_91">bcus</Literal>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions IsLoose="True" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="qa.360factors.com/predict360/login.do" ContentHash="74n50Dzt2kqZMUqz-QDF5A" DesignTimeRectangle="97, 654, 532, 57" ElementType="InputBox" Guid="6ec05398-b274-4e2b-80f3-226a9c645f8c" InformativeScreenshot="bd9580db17ef90fad2363a57408d39d9.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/FBUqmTIEO0SFnOVdIe2YDA" SearchSteps="Selector" Version="V6">
+                      <uix:TargetAnchorable.ElementVisibilityArgument>
+                        <InArgument x:TypeArguments="uix:NElementVisibility">
+                          <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_140" Value="Interactive" />
+                        </InArgument>
+                      </uix:TargetAnchorable.ElementVisibilityArgument>
+                      <uix:TargetAnchorable.FullSelectorArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_143">&lt;webctrl id='customerKey' tag='INPUT' /&gt;</Literal>
+                        </InArgument>
+                      </uix:TargetAnchorable.FullSelectorArgument>
+                      <uix:TargetAnchorable.ScopeSelectorArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_141">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                        </InArgument>
+                      </uix:TargetAnchorable.ScopeSelectorArgument>
+                      <uix:TargetAnchorable.WaitForReadyArgument>
+                        <InArgument x:TypeArguments="uix:NWaitForReady">
+                          <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_142" Value="Interactive" />
+                        </InArgument>
+                      </uix:TargetAnchorable.WaitForReadyArgument>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionTypeIntoOptions.Target>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick DisplayName="Click the Login button." sap:VirtualizedContainerService.HintSize="424,312" sap2010:WorkflowViewState.IdRef="NClick_12" ScopeIdentifier="d4ce581e-3ab6-4bf4-b3ef-0f8075f10a8f" Version="V5">
+              <uix:NClick.ActivateBefore>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_101" Value="True" />
+                </InArgument>
+              </uix:NClick.ActivateBefore>
+              <uix:NClick.ClickType>
+                <InArgument x:TypeArguments="uix:NClickType">
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_99" />
+                </InArgument>
+              </uix:NClick.ClickType>
+              <uix:NClick.DelayAfter>
+                <InArgument x:TypeArguments="x:Double">
+                  <Literal x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="Literal`1_103" Value="10" />
+                </InArgument>
+              </uix:NClick.DelayAfter>
+              <uix:NClick.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_104" />
+                </InArgument>
+              </uix:NClick.HealingAgentBehavior>
+              <uix:NClick.InteractionMode>
+                <InArgument x:TypeArguments="uix:NChildInteractionMode">
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_102" />
+                </InArgument>
+              </uix:NClick.InteractionMode>
+              <uix:NClick.KeyModifiers>
+                <InArgument x:TypeArguments="uix:NKeyModifiers">
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_98" />
+                </InArgument>
+              </uix:NClick.KeyModifiers>
+              <uix:NClick.MouseButton>
+                <InArgument x:TypeArguments="uix:NMouseButton">
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_100" />
+                </InArgument>
+              </uix:NClick.MouseButton>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="qa.360factors.com/predict360/login.do" ContentHash="MN74LvCrREiXE8pg4RjNTw" DesignTimeRectangle="282, 595, 146, 63" ElementType="Text" Guid="9923089b-62fa-46fe-baee-c1846056f8b1" InformativeScreenshot="0cb8b5d675f9a33080c14364b27805ec.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/eTLUx8lZZUikbHwkLwvkzA" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_124" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_127">&lt;webctrl parentid='m_login_signin_submit' tag='A' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_125">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                  <uix:TargetAnchorable.WaitForReadyArgument>
+                    <InArgument x:TypeArguments="uix:NWaitForReady">
+                      <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_126" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.WaitForReadyArgument>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get the welcome text from the profile page." sap:VirtualizedContainerService.HintSize="424,142.4" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="d4ce581e-3ab6-4bf4-b3ef-0f8075f10a8f" Version="V5">
+              <uix:NGetText.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_108" />
+                </InArgument>
+              </uix:NGetText.HealingAgentBehavior>
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="qa.360factors.com/predict360/profile.do" ContentHash="cI3phCoY8EO4B5QHBfJGfQ" DesignTimeRectangle="120, 193, 526, 69" ElementType="Text" Guid="9a37d828-f9ad-4e0f-87cf-a5b64ca5890a" InformativeScreenshot="c2e2657d8c2e5dcaa525e3188c4bfe16.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/QiysalbbzUCItzWyJx8n-w" SearchSteps="Selector" Version="V6">
+                  <uix:TargetAnchorable.ElementVisibilityArgument>
+                    <InArgument x:TypeArguments="uix:NElementVisibility">
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_128" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.ElementVisibilityArgument>
+                  <uix:TargetAnchorable.FullSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_131">&lt;webctrl tag='H3' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.FullSelectorArgument>
+                  <uix:TargetAnchorable.ScopeSelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_129">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.ScopeSelectorArgument>
+                  <uix:TargetAnchorable.WaitForReadyArgument>
+                    <InArgument x:TypeArguments="uix:NWaitForReady">
+                      <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_130" Value="Interactive" />
+                    </InArgument>
+                  </uix:TargetAnchorable.WaitForReadyArgument>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="variable1" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_12" />
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <Assign DisplayName="Clean up the extracted welcome text." sap:VirtualizedContainerService.HintSize="424,174.4" sap2010:WorkflowViewState.IdRef="Assign_14">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="variable1" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_13" />
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="variable1.Trim()" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_13" />
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log the welcome text." sap:VirtualizedContainerService.HintSize="424,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_30">
+              <ui:LogMessage.Level>
+                <InArgument x:TypeArguments="ui:LogLevel">
+                  <Literal x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="Literal`1_109" Value="Info" />
+                </InArgument>
+              </ui:LogMessage.Level>
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <VisualBasicValue x:TypeArguments="x:Object" ExpressionText="String.Format(&quot;Welcome Text: {0}&quot;, variable1)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_14" />
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <ui:IsMatch DisplayName="Check if the welcome text matches the expected pattern." sap:VirtualizedContainerService.HintSize="424,92" sap2010:WorkflowViewState.IdRef="IsMatch_16" IsBuilderTabModified="False" RegexOption="IgnoreCase, Singleline">
+              <ui:IsMatch.Input>
+                <InArgument x:TypeArguments="x:String">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="variable1" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_15" />
+                </InArgument>
+              </ui:IsMatch.Input>
+              <ui:IsMatch.Pattern>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_110">Welcome\s+CMS\s+Automation\s+!</Literal>
+                </InArgument>
+              </ui:IsMatch.Pattern>
+              <ui:IsMatch.Result>
+                <OutArgument x:TypeArguments="x:Boolean">
+                  <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="textMatchResult" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_14" />
+                </OutArgument>
+              </ui:IsMatch.Result>
+            </ui:IsMatch>
+            <ui:LogMessage DisplayName="Log the welcome text assertion result." sap:VirtualizedContainerService.HintSize="424,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_31">
+              <ui:LogMessage.Level>
+                <InArgument x:TypeArguments="ui:LogLevel">
+                  <Literal x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="Literal`1_111" Value="Info" />
+                </InArgument>
+              </ui:LogMessage.Level>
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <VisualBasicValue x:TypeArguments="x:Object" ExpressionText="String.Format(&quot;Welcome Text Assertion: {0}&quot;, If(textMatchResult, &quot;PASS - Welcome text matches expected&quot;, &quot;FAIL - Welcome text does not match. Actual: &quot; &amp; variable1))" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_16" />
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.CloseMode>
+        <InArgument x:TypeArguments="uix:NAppCloseMode">
+          <Literal x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="Literal`1_73" />
+        </InArgument>
+      </uix:NApplicationCard.CloseMode>
+      <uix:NApplicationCard.HealingAgentBehavior>
+        <InArgument x:TypeArguments="uix:NHealingAgentBehavior">
+          <Literal x:TypeArguments="uix:NHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_74" />
+        </InArgument>
+      </uix:NApplicationCard.HealingAgentBehavior>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.OpenMode>
+        <InArgument x:TypeArguments="uix:NAppOpenMode">
+          <Literal x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="Literal`1_72" Value="IfNotOpen" />
+        </InArgument>
+      </uix:NApplicationCard.OpenMode>
+      <uix:NApplicationCard.OutUiElement>
+        <OutArgument x:TypeArguments="ui:UiElement">
+          <VisualBasicReference x:TypeArguments="ui:UiElement" ExpressionText="browserElement" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_8" />
+        </OutArgument>
+      </uix:NApplicationCard.OutUiElement>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="361, 176, 1417, 1081" BrowserType="Chrome" ContentHash="OSz2LchulU27e8h0-KO3zQ" IconBase64="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" InformativeScreenshot="3d95deb46d2c953549fba2d4ec09df09.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/vGu1Zqt1PUCK4aFFRKpFrg" Version="V2">
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_75">&lt;html app='chrome.exe' title='New Tab' /&gt;</Literal>
+            </InArgument>
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_76">https://stage.360factors.com/predict360/login.do</Literal>
+            </InArgument>
+          </uix:TargetApp.Url>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <Assign DisplayName="Assign browser session to output argument" sap:VirtualizedContainerService.HintSize="459.2,165.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+      <Assign.To>
+        <OutArgument x:TypeArguments="ui:UiElement">
+          <VisualBasicReference x:TypeArguments="ui:UiElement" ExpressionText="out_BrowserSession" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_9" />
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="ui:UiElement">
+          <VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="browserElement" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_9" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>
