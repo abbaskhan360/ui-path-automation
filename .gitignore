@@ -18,6 +18,9 @@
 # Test Manager Hub config
 .tmh/
 
+# Informative screenshots - design-time visual previews only (not needed for execution)
+.screenshots/
+
 # Temp files
 *.ps1
 git_*.txt
@@ -30,6 +33,14 @@ git_*.txt
 #   entry-points.json   — Workflow entry points
 #   *.xaml              — Workflow definitions
 #   *.xaml.json         — Workflow designer metadata
-#   .storage/           — UI element ancestry & target data (needed for Click/Type)
-#   .screenshots/       — Informative screenshots (needed for designer context)
+#   .storage/           — UI element ancestry & target data (REQUIRED for Click/Type)
+################################################################################
+
+################################################################################
+# Added by UiPath Studio
+# Prevent caching and local artifacts from being committed
+################################################################################
+.local
+################################################################################
+# End of UiPath Studio common ignores
 ################################################################################
