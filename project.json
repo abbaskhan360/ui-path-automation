@@ -2,7 +2,7 @@
   "name": "IssueManagement",
   "projectId": "21ab9f88-79e5-4a5d-8a8d-fe5f47f65cfe",
   "description": "IssueManagementWorkflows",
-  "main": "Main.xaml",
+  "main": "IssueManagementSingle\\Main.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[26.2.4]",
     "UiPath.Testing.Activities": "[25.10.1]",
@@ -46,44 +46,56 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "3666f6a2-14cc-43d4-82cc-c996a13030b7",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "Login.xaml",
       "uniqueId": "a0dfbf8b-bef6-4c6f-80f3-0858dd07f80b",
       "input": [],
       "output": []
     },
     {
-      "filePath": "CreateParentTicket.xaml",
-      "uniqueId": "9bafb7bb-20a8-40d2-b79f-90767769569e",
+      "filePath": "IssueManagementSingle\\ActionPlan.xaml",
+      "uniqueId": "a4e89a7e-71e2-4a75-a29c-f310c85ccb30",
       "input": [],
       "output": []
     },
     {
-      "filePath": "ParentTicket.xaml",
-      "uniqueId": "8b265a4a-6041-4261-ab8c-db94d280f6a5",
+      "filePath": "IssueManagementSingle\\ActionPlanWorkflows.xaml",
+      "uniqueId": "8532ca55-fe91-480c-8ff0-d367b4de383b",
       "input": [],
       "output": []
     },
     {
-      "filePath": "ActionPlan.xaml",
-      "uniqueId": "73f0613f-8b4f-478f-b3bf-96865411082e",
+      "filePath": "IssueManagementSingle\\CreateActionPlan.xaml",
+      "uniqueId": "0719ea7d-7e6b-4881-af74-c01064d819e8",
       "input": [],
       "output": []
     },
     {
-      "filePath": "CreateActionPlan.xaml",
-      "uniqueId": "6adc6225-722a-468f-a07e-a711e5e8a9c8",
+      "filePath": "IssueManagementSingle\\CreateParentTicket.xaml",
+      "uniqueId": "7ba6c918-ce14-4460-9cf8-0f22a3051c86",
       "input": [],
       "output": []
     },
     {
-      "filePath": "ActionPlanWorkflows.xaml",
-      "uniqueId": "9924623e-045e-4b2f-b327-63a74ff477b0",
+      "filePath": "IssueManagementSingle\\GenerateHtmlReport.cs",
+      "uniqueId": "98040406-6ec7-4209-a8f6-fac40e59ab37",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "IssueManagementSingle\\Main.xaml",
+      "uniqueId": "4954e1b6-831c-4373-abcc-9cbe33bd1c32",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "IssueManagementSingle\\ParentTicket.xaml",
+      "uniqueId": "5dfb1d6e-5786-4f03-8ec8-3f021a8b9841",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TaskManagement\\TaskMain.xaml",
+      "uniqueId": "31b82a44-aca4-4833-a412-c576111fb15a",
       "input": [],
       "output": []
     }

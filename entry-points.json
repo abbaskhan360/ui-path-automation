@@ -2,8 +2,8 @@
   "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
   "entryPoints": [
     {
-      "filePath": "ActionPlan.xaml",
-      "uniqueId": "73f0613f-8b4f-478f-b3bf-96865411082e",
+      "filePath": "IssueManagementSingle\\ActionPlan.xaml",
+      "uniqueId": "a4e89a7e-71e2-4a75-a29c-f310c85ccb30",
       "type": "process",
       "input": {
         "type": "object",
@@ -202,8 +202,8 @@
       }
     },
     {
-      "filePath": "ActionPlanWorkflows.xaml",
-      "uniqueId": "9924623e-045e-4b2f-b327-63a74ff477b0",
+      "filePath": "IssueManagementSingle\\ActionPlanWorkflows.xaml",
+      "uniqueId": "8532ca55-fe91-480c-8ff0-d367b4de383b",
       "type": "process",
       "input": {
         "type": "object",
@@ -387,8 +387,8 @@
       }
     },
     {
-      "filePath": "CreateActionPlan.xaml",
-      "uniqueId": "6adc6225-722a-468f-a07e-a711e5e8a9c8",
+      "filePath": "IssueManagementSingle\\CreateActionPlan.xaml",
+      "uniqueId": "0719ea7d-7e6b-4881-af74-c01064d819e8",
       "type": "process",
       "input": {
         "type": "object",
@@ -587,12 +587,450 @@
       }
     },
     {
-      "filePath": "CreateParentTicket.xaml",
-      "uniqueId": "9bafb7bb-20a8-40d2-b79f-90767769569e",
+      "filePath": "IssueManagementSingle\\CreateParentTicket.xaml",
+      "uniqueId": "7ba6c918-ce14-4460-9cf8-0f22a3051c86",
       "type": "process",
       "input": {
         "type": "object",
         "properties": {
+          "in_BrowserSession": {
+            "type": "object",
+            "properties": {
+              "Selector": {
+                "$ref": "#/$defs/selector"
+              },
+              "ClippingRegion": {
+                "$ref": "#/$defs/region"
+              },
+              "ClippingRegion_Normalized": {
+                "$ref": "#/$defs/region"
+              },
+              "ImageBase64": {
+                "$ref": "#/$defs/string"
+              },
+              "Timeout": {
+                "$ref": "#/$defs/integer"
+              },
+              "WaitForReadyLevel": {
+                "enum": [
+                  "NONE",
+                  "INTERACTIVE",
+                  "COMPLETE"
+                ]
+              },
+              "Attributes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/string"
+                },
+                "readOnly": true
+              },
+              "Activate": {
+                "type": "boolean"
+              },
+              "AlterIfDisabled": {
+                "type": "boolean"
+              },
+              "ScaleFactor": {
+                "$ref": "#/$defs/number"
+              },
+              "AppZoomFactor": {
+                "$ref": "#/$defs/number"
+              },
+              "DisplayDpiScaleFactor": {
+                "$ref": "#/$defs/number"
+              },
+              "UseNonBlockingInput": {
+                "type": "boolean"
+              },
+              "SelectorStrategy": {
+                "enum": [
+                  "DEFAULT",
+                  "AA_ONLY",
+                  "WND_ONLY",
+                  "UIA_ONLY",
+                  "AUTO"
+                ]
+              },
+              "options": {
+                "enum": [
+                  "DEFAULT",
+                  "NO_INDEX",
+                  "FOR_MONITORING"
+                ]
+              }
+            },
+            "$defs": {
+              "selector": {
+                "type": "object",
+                "properties": {
+                  "UseOmit": {
+                    "type": "boolean"
+                  },
+                  "Text": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "ParentSelector": {
+                    "$ref": "#/$defs/selector"
+                  }
+                }
+              },
+              "string": {
+                "type": "string",
+                "readOnly": true
+              },
+              "region": {
+                "type": "object",
+                "properties": {
+                  "Rectangle": {
+                    "type": "object",
+                    "properties": {
+                      "Location": {
+                        "type": "object",
+                        "properties": {
+                          "IsEmpty": {
+                            "$ref": "#/$defs/boolean"
+                          },
+                          "X": {
+                            "$ref": "#/$defs/integer"
+                          },
+                          "Y": {
+                            "$ref": "#/$defs/integer"
+                          }
+                        }
+                      },
+                      "Size": {
+                        "type": "object",
+                        "properties": {
+                          "IsEmpty": {
+                            "$ref": "#/$defs/boolean"
+                          },
+                          "Width": {
+                            "$ref": "#/$defs/integer"
+                          },
+                          "Height": {
+                            "$ref": "#/$defs/integer"
+                          }
+                        }
+                      },
+                      "X": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Y": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Width": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Height": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Left": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "Top": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "Right": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "Bottom": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "IsEmpty": {
+                        "$ref": "#/$defs/boolean"
+                      }
+                    }
+                  }
+                }
+              },
+              "boolean": {
+                "type": "boolean",
+                "readOnly": true
+              },
+              "integer": {
+                "type": "integer",
+                "minimum": -2147483648,
+                "maximum": 2147483647
+              },
+              "integer1": {
+                "type": "integer",
+                "minimum": -2147483648,
+                "maximum": 2147483647,
+                "readOnly": true
+              },
+              "number": {
+                "type": "number",
+                "minimum": -1.7976931348623157E+308,
+                "maximum": 1.7976931348623157E+308,
+                "readOnly": true
+              }
+            }
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "filePath": "IssueManagementSingle\\GenerateHtmlReport.cs",
+      "uniqueId": "98040406-6ec7-4209-a8f6-fac40e59ab37",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_ReportData": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "in_OutputPath": {
+            "type": "string",
+            "x-default-expression": "\"\"",
+            "default": ""
+          }
+        },
+        "required": [
+          "in_ReportData",
+          "in_OutputPath"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "Output": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "filePath": "IssueManagementSingle\\Main.xaml",
+      "uniqueId": "4954e1b6-831c-4373-abcc-9cbe33bd1c32",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "UiPathEventConnector": {
+            "type": "string"
+          },
+          "UiPathEvent": {
+            "type": "string"
+          },
+          "UiPathEventObjectType": {
+            "type": "string"
+          },
+          "UiPathEventObjectId": {
+            "type": "string"
+          },
+          "UiPathAdditionalEventData": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_BrowserSession": {
+            "type": "object",
+            "properties": {
+              "Selector": {
+                "$ref": "#/$defs/selector"
+              },
+              "ClippingRegion": {
+                "$ref": "#/$defs/region"
+              },
+              "ClippingRegion_Normalized": {
+                "$ref": "#/$defs/region"
+              },
+              "ImageBase64": {
+                "$ref": "#/$defs/string"
+              },
+              "Timeout": {
+                "$ref": "#/$defs/integer"
+              },
+              "WaitForReadyLevel": {
+                "enum": [
+                  "NONE",
+                  "INTERACTIVE",
+                  "COMPLETE"
+                ]
+              },
+              "Attributes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/string"
+                },
+                "readOnly": true
+              },
+              "Activate": {
+                "type": "boolean"
+              },
+              "AlterIfDisabled": {
+                "type": "boolean"
+              },
+              "ScaleFactor": {
+                "$ref": "#/$defs/number"
+              },
+              "AppZoomFactor": {
+                "$ref": "#/$defs/number"
+              },
+              "DisplayDpiScaleFactor": {
+                "$ref": "#/$defs/number"
+              },
+              "UseNonBlockingInput": {
+                "type": "boolean"
+              },
+              "SelectorStrategy": {
+                "enum": [
+                  "DEFAULT",
+                  "AA_ONLY",
+                  "WND_ONLY",
+                  "UIA_ONLY",
+                  "AUTO"
+                ]
+              },
+              "options": {
+                "enum": [
+                  "DEFAULT",
+                  "NO_INDEX",
+                  "FOR_MONITORING"
+                ]
+              }
+            },
+            "$defs": {
+              "selector": {
+                "type": "object",
+                "properties": {
+                  "UseOmit": {
+                    "type": "boolean"
+                  },
+                  "Text": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "ParentSelector": {
+                    "$ref": "#/$defs/selector"
+                  }
+                }
+              },
+              "string": {
+                "type": "string",
+                "readOnly": true
+              },
+              "region": {
+                "type": "object",
+                "properties": {
+                  "Rectangle": {
+                    "type": "object",
+                    "properties": {
+                      "Location": {
+                        "type": "object",
+                        "properties": {
+                          "IsEmpty": {
+                            "$ref": "#/$defs/boolean"
+                          },
+                          "X": {
+                            "$ref": "#/$defs/integer"
+                          },
+                          "Y": {
+                            "$ref": "#/$defs/integer"
+                          }
+                        }
+                      },
+                      "Size": {
+                        "type": "object",
+                        "properties": {
+                          "IsEmpty": {
+                            "$ref": "#/$defs/boolean"
+                          },
+                          "Width": {
+                            "$ref": "#/$defs/integer"
+                          },
+                          "Height": {
+                            "$ref": "#/$defs/integer"
+                          }
+                        }
+                      },
+                      "X": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Y": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Width": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Height": {
+                        "$ref": "#/$defs/integer"
+                      },
+                      "Left": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "Top": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "Right": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "Bottom": {
+                        "$ref": "#/$defs/integer1"
+                      },
+                      "IsEmpty": {
+                        "$ref": "#/$defs/boolean"
+                      }
+                    }
+                  }
+                }
+              },
+              "boolean": {
+                "type": "boolean",
+                "readOnly": true
+              },
+              "integer": {
+                "type": "integer",
+                "minimum": -2147483648,
+                "maximum": 2147483647
+              },
+              "integer1": {
+                "type": "integer",
+                "minimum": -2147483648,
+                "maximum": 2147483647,
+                "readOnly": true
+              },
+              "number": {
+                "type": "number",
+                "minimum": -1.7976931348623157E+308,
+                "maximum": 1.7976931348623157E+308,
+                "readOnly": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "filePath": "IssueManagementSingle\\ParentTicket.xaml",
+      "uniqueId": "5dfb1d6e-5786-4f03-8ec8-3f021a8b9841",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "UiPathEventConnector": {
+            "type": "string"
+          },
+          "UiPathEvent": {
+            "type": "string"
+          },
+          "UiPathEventObjectType": {
+            "type": "string"
+          },
+          "UiPathEventObjectId": {
+            "type": "string"
+          },
+          "UiPathAdditionalEventData": {
+            "type": "string"
+          },
           "in_BrowserSession": {
             "type": "object",
             "properties": {
@@ -977,8 +1415,8 @@
       }
     },
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "3666f6a2-14cc-43d4-82cc-c996a13030b7",
+      "filePath": "TaskManagement\\TaskMain.xaml",
+      "uniqueId": "31b82a44-aca4-4833-a412-c576111fb15a",
       "type": "process",
       "input": {
         "type": "object",
@@ -1179,206 +1617,6 @@
             }
           }
         }
-      }
-    },
-    {
-      "filePath": "ParentTicket.xaml",
-      "uniqueId": "8b265a4a-6041-4261-ab8c-db94d280f6a5",
-      "type": "process",
-      "input": {
-        "type": "object",
-        "properties": {
-          "UiPathEventConnector": {
-            "type": "string"
-          },
-          "UiPathEvent": {
-            "type": "string"
-          },
-          "UiPathEventObjectType": {
-            "type": "string"
-          },
-          "UiPathEventObjectId": {
-            "type": "string"
-          },
-          "UiPathAdditionalEventData": {
-            "type": "string"
-          },
-          "in_BrowserSession": {
-            "type": "object",
-            "properties": {
-              "Selector": {
-                "$ref": "#/$defs/selector"
-              },
-              "ClippingRegion": {
-                "$ref": "#/$defs/region"
-              },
-              "ClippingRegion_Normalized": {
-                "$ref": "#/$defs/region"
-              },
-              "ImageBase64": {
-                "$ref": "#/$defs/string"
-              },
-              "Timeout": {
-                "$ref": "#/$defs/integer"
-              },
-              "WaitForReadyLevel": {
-                "enum": [
-                  "NONE",
-                  "INTERACTIVE",
-                  "COMPLETE"
-                ]
-              },
-              "Attributes": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/$defs/string"
-                },
-                "readOnly": true
-              },
-              "Activate": {
-                "type": "boolean"
-              },
-              "AlterIfDisabled": {
-                "type": "boolean"
-              },
-              "ScaleFactor": {
-                "$ref": "#/$defs/number"
-              },
-              "AppZoomFactor": {
-                "$ref": "#/$defs/number"
-              },
-              "DisplayDpiScaleFactor": {
-                "$ref": "#/$defs/number"
-              },
-              "UseNonBlockingInput": {
-                "type": "boolean"
-              },
-              "SelectorStrategy": {
-                "enum": [
-                  "DEFAULT",
-                  "AA_ONLY",
-                  "WND_ONLY",
-                  "UIA_ONLY",
-                  "AUTO"
-                ]
-              },
-              "options": {
-                "enum": [
-                  "DEFAULT",
-                  "NO_INDEX",
-                  "FOR_MONITORING"
-                ]
-              }
-            },
-            "$defs": {
-              "selector": {
-                "type": "object",
-                "properties": {
-                  "UseOmit": {
-                    "type": "boolean"
-                  },
-                  "Text": {
-                    "$ref": "#/$defs/string"
-                  },
-                  "ParentSelector": {
-                    "$ref": "#/$defs/selector"
-                  }
-                }
-              },
-              "string": {
-                "type": "string",
-                "readOnly": true
-              },
-              "region": {
-                "type": "object",
-                "properties": {
-                  "Rectangle": {
-                    "type": "object",
-                    "properties": {
-                      "Location": {
-                        "type": "object",
-                        "properties": {
-                          "IsEmpty": {
-                            "$ref": "#/$defs/boolean"
-                          },
-                          "X": {
-                            "$ref": "#/$defs/integer"
-                          },
-                          "Y": {
-                            "$ref": "#/$defs/integer"
-                          }
-                        }
-                      },
-                      "Size": {
-                        "type": "object",
-                        "properties": {
-                          "IsEmpty": {
-                            "$ref": "#/$defs/boolean"
-                          },
-                          "Width": {
-                            "$ref": "#/$defs/integer"
-                          },
-                          "Height": {
-                            "$ref": "#/$defs/integer"
-                          }
-                        }
-                      },
-                      "X": {
-                        "$ref": "#/$defs/integer"
-                      },
-                      "Y": {
-                        "$ref": "#/$defs/integer"
-                      },
-                      "Width": {
-                        "$ref": "#/$defs/integer"
-                      },
-                      "Height": {
-                        "$ref": "#/$defs/integer"
-                      },
-                      "Left": {
-                        "$ref": "#/$defs/integer1"
-                      },
-                      "Top": {
-                        "$ref": "#/$defs/integer1"
-                      },
-                      "Right": {
-                        "$ref": "#/$defs/integer1"
-                      },
-                      "Bottom": {
-                        "$ref": "#/$defs/integer1"
-                      },
-                      "IsEmpty": {
-                        "$ref": "#/$defs/boolean"
-                      }
-                    }
-                  }
-                }
-              },
-              "boolean": {
-                "type": "boolean",
-                "readOnly": true
-              },
-              "integer": {
-                "type": "integer",
-                "minimum": -2147483648,
-                "maximum": 2147483647
-              },
-              "integer1": {
-                "type": "integer",
-                "minimum": -2147483648,
-                "maximum": 2147483647,
-                "readOnly": true
-              },
-              "number": {
-                "type": "number",
-                "minimum": -1.7976931348623157E+308,
-                "maximum": 1.7976931348623157E+308,
-                "readOnly": true
-              }
-            }
-          }
-        },
-        "required": []
       }
     }
   ]

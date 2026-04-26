@@ -2,5 +2,5 @@
   "Name": "IssueManagement",
   "ProjectType": "Process",
   "Description": "IssueManagementWorkflows",
-  "MainFile": "Main.xaml"
+  "MainFile": "IssueManagementSingle\\Main.xaml"
 }
