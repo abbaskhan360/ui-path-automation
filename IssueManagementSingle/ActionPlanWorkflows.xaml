@@ -230,9 +230,10 @@
       <AssemblyReference>UiPath.Testing</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="736.4000000000001,2758.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
+  <Sequence sap:VirtualizedContainerService.HintSize="706,2686.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
@@ -248,7 +249,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Predict 360" sap:VirtualizedContainerService.HintSize="451.2,2735.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" ScopeGuid="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Predict 360" sap:VirtualizedContainerService.HintSize="451.2,2663.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" ScopeGuid="91b21aa0-4010-4217-8912-0e6fc6282059" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

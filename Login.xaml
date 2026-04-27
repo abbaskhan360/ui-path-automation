@@ -244,7 +244,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="578,3050.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
+  <Sequence sap:VirtualizedContainerService.HintSize="578,2978.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="urlMatchResult" />
       <Variable x:TypeArguments="x:Boolean" Name="textMatchResult" />
@@ -261,13 +261,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="459.2,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_12" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" sap:VirtualizedContainerService.HintSize="459.2,2783.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" InteractionMode="DebuggerApi" ScopeGuid="2080c655-8ec5-464e-b920-b7b442eef195" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" sap:VirtualizedContainerService.HintSize="459.2,2711.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" InteractionMode="DebuggerApi" ScopeGuid="2080c655-8ec5-464e-b920-b7b442eef195" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="457.6,2580.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="457.6,2508.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -517,7 +517,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto DisplayName="Type the customer key into the customer key field." sap:VirtualizedContainerService.HintSize="424,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_36" ScopeIdentifier="2080c655-8ec5-464e-b920-b7b442eef195" Version="V5">
+            <uix:NTypeInto DisplayName="Type the customer key into the customer key field." sap:VirtualizedContainerService.HintSize="424,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_36" ScopeIdentifier="2080c655-8ec5-464e-b920-b7b442eef195" Version="V5">
               <uix:NTypeInto.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
                   <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_24" Value="True" />
@@ -577,40 +577,6 @@
                   <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_23">bcus</Literal>
                 </InArgument>
               </uix:NTypeInto.Text>
-              <uix:NTypeInto.VerifyOptions>
-                <uix:VerifyExecutionTypeIntoOptions IsLoose="True" Mode="Appears">
-                  <uix:VerifyExecutionTypeIntoOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionTypeIntoOptions.Retry>
-                  <uix:VerifyExecutionTypeIntoOptions.Target>
-                    <uix:TargetAnchorable BrowserURL="qa.360factors.com/predict360/login.do" ContentHash="74n50Dzt2kqZMUqz-QDF5A" DesignTimeRectangle="97, 654, 532, 57" ElementType="InputBox" Guid="6ec05398-b274-4e2b-80f3-226a9c645f8c" InformativeScreenshot="bd9580db17ef90fad2363a57408d39d9.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/FBUqmTIEO0SFnOVdIe2YDA" SearchSteps="Selector" Version="V6">
-                      <uix:TargetAnchorable.ElementVisibilityArgument>
-                        <InArgument x:TypeArguments="uix:NElementVisibility">
-                          <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_73" Value="Interactive" />
-                        </InArgument>
-                      </uix:TargetAnchorable.ElementVisibilityArgument>
-                      <uix:TargetAnchorable.FullSelectorArgument>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_76">&lt;webctrl id='customerKey' tag='INPUT' /&gt;</Literal>
-                        </InArgument>
-                      </uix:TargetAnchorable.FullSelectorArgument>
-                      <uix:TargetAnchorable.ScopeSelectorArgument>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_74">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
-                        </InArgument>
-                      </uix:TargetAnchorable.ScopeSelectorArgument>
-                      <uix:TargetAnchorable.WaitForReadyArgument>
-                        <InArgument x:TypeArguments="uix:NWaitForReady">
-                          <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_75" Value="Interactive" />
-                        </InArgument>
-                      </uix:TargetAnchorable.WaitForReadyArgument>
-                    </uix:TargetAnchorable>
-                  </uix:VerifyExecutionTypeIntoOptions.Target>
-                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                </uix:VerifyExecutionTypeIntoOptions>
-              </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
             <uix:NClick DisplayName="Click the Login button." sap:VirtualizedContainerService.HintSize="424,312" sap2010:WorkflowViewState.IdRef="NClick_13" ScopeIdentifier="2080c655-8ec5-464e-b920-b7b442eef195" Version="V5">
               <uix:NClick.ActivateBefore>
