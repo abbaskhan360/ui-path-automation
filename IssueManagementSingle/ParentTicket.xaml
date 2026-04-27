@@ -242,9 +242,10 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="578,2298.4" sap2010:WorkflowViewState.IdRef="Sequence_50">
+  <Sequence sap:VirtualizedContainerService.HintSize="578,2191.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
@@ -261,13 +262,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="451.2,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_18" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(4)" sap:VirtualizedContainerService.HintSize="451.2,2196.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" InteractionMode="DebuggerApi" ScopeGuid="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(4)" sap:VirtualizedContainerService.HintSize="451.2,2089.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" InteractionMode="DebuggerApi" ScopeGuid="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2023.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1968" sap2010:WorkflowViewState.IdRef="Sequence_49">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -600,12 +601,12 @@
                 </VisualBasicValue>
               </InArgument>
             </Delay>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Create Parent Ticket" sap:VirtualizedContainerService.HintSize="416,232" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="IssueManagementSingle\CreateParentTicket.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Create Parent Ticket" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="IssueManagementSingle\CreateParentTicket.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                <InArgument x:TypeArguments="ui:UiElement" x:Key="in_BrowserSession">[in_BrowserSession]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Update Parent Ticket" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="IssueManagementSingle\EditParentTicket.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Update Parent Ticket" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="IssueManagementSingle\EditParentTicket.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="ui:UiElement" x:Key="in_BrowserSession">[in_BrowserSession]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
