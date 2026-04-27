@@ -98,6 +98,12 @@
       "uniqueId": "31b82a44-aca4-4833-a412-c576111fb15a",
       "input": [],
       "output": []
+    },
+    {
+      "filePath": "TaskManagement\\CreateTask.xaml",
+      "uniqueId": "e37f529d-76ba-4341-ac5f-dbc1973a00e1",
+      "input": [],
+      "output": []
     }
   ],
   "isTemplate": false,
