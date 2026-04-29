@@ -1,0 +1,154 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_EditAndSaveVerification"
+  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+  xmlns:s="clr-namespace:System;assembly=mscorlib"
+  xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+  xmlns:ui="http://schemas.uipath.com/workflow/activities"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_BaseURL" Type="InArgument(x:String)" />
+    <x:Property Name="in_Username" Type="InArgument(x:String)" />
+    <x:Property Name="in_Password" Type="InArgument(x:String)" />
+    <x:Property Name="in_CustomerKey" Type="InArgument(x:String)" />
+    <x:Property Name="in_QATestSeriesRoute" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <mva:VisualBasicSettings>
+      <mva:VisualBasicSettings.ImportReferences>
+        <mva:VisualBasicImportReference Import="System" Assembly="mscorlib" />
+        <mva:VisualBasicImportReference Import="UiPath.Core" Assembly="UiPath.Core" />
+        <mva:VisualBasicImportReference Import="UiPath.Core.Activities" Assembly="UiPath.Core.Activities" />
+      </mva:VisualBasicSettings.ImportReferences>
+    </mva:VisualBasicSettings>
+  </mva:VisualBasic.Settings>
+  <Sequence DisplayName="TC: Edit and Save Data Verification" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="var_InitialName" />
+      <Variable x:TypeArguments="x:String" Name="var_UpdatedName" />
+      <Variable x:TypeArguments="x:String" Name="var_SuccessMessage" />
+      <Variable x:TypeArguments="x:Boolean" Name="var_RowFound" Default="False" />
+    </Sequence.Variables>
+
+    <!-- Login -->
+    <InvokeWorkflowFile DisplayName="Login to Application" WorkflowFileName="Workflows\Common\Login.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_BaseURL">[in_BaseURL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Username">[in_Username]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Password">[in_Password]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CustomerKey">[in_CustomerKey]</InArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <!-- Navigate to QA Test Series -->
+    <InvokeWorkflowFile DisplayName="Navigate to QA Test Series" WorkflowFileName="Workflows\Common\NavigateToQATestSeries.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Route">[in_QATestSeriesRoute]</InArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <!-- STEP 1: Create initial test series -->
+    <Assign DisplayName="Generate Initial Name" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[var_InitialName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["Edit Test " &amp; DateTime.Now.Ticks.ToString()]</InArgument>
+      </Assign.Value>
+    </Assign>
+
+    <InvokeWorkflowFile DisplayName="Click Add Button" WorkflowFileName="Workflows\PageActions\ClickAddButton.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" />
+
+    <InvokeWorkflowFile DisplayName="Fill Mandatory Fields (Initial)" WorkflowFileName="Workflows\PageActions\FillMandatoryFields.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Name">[var_InitialName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_BusinessUnit">18821</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LawRegulation">895</InArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <InvokeWorkflowFile DisplayName="Click Save (Initial)" WorkflowFileName="Workflows\PageActions\ClickSaveButton.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" />
+
+    <InvokeWorkflowFile DisplayName="Verify Success (Initial)" WorkflowFileName="Workflows\Verification\VerifySuccessToast.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6">
+      <InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_MessageText">[var_SuccessMessage]</OutArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <!-- Navigate back to list -->
+    <Delay DisplayName="Wait Before Navigation" Duration="[TimeSpan.FromSeconds(3)]" sap2010:WorkflowViewState.IdRef="Delay_1" />
+
+    <InvokeWorkflowFile DisplayName="Navigate Back to List" WorkflowFileName="Workflows\Common\NavigateToQATestSeries.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Route">[in_QATestSeriesRoute]</InArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <Delay DisplayName="Wait for List Load" Duration="[TimeSpan.FromSeconds(3)]" sap2010:WorkflowViewState.IdRef="Delay_2" />
+
+    <!-- STEP 2: Edit the test series with new name -->
+    <Assign DisplayName="Generate Updated Name" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[var_UpdatedName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[var_InitialName &amp; " - Updated"]</InArgument>
+      </Assign.Value>
+    </Assign>
+
+    <!-- Click Edit for the initial record -->
+    <InvokeWorkflowFile DisplayName="Click Edit Button" WorkflowFileName="Workflows\PageActions\ClickEditButton.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TestSeriesName">[var_InitialName]</InArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <!-- Update the name field -->
+    <InvokeWorkflowFile DisplayName="Update Test Series Name" WorkflowFileName="Workflows\PageActions\FillTestSeriesName.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Name">[var_UpdatedName]</InArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <!-- Save the edit -->
+    <InvokeWorkflowFile DisplayName="Click Save (Edit)" WorkflowFileName="Workflows\PageActions\ClickSaveButton.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" />
+
+    <InvokeWorkflowFile DisplayName="Verify Success (Edit)" WorkflowFileName="Workflows\Verification\VerifySuccessToast.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11">
+      <InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_MessageText">[var_SuccessMessage]</OutArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <!-- STEP 3: Navigate back and verify the updated record -->
+    <Delay DisplayName="Wait Before Final Verification" Duration="[TimeSpan.FromSeconds(2)]" sap2010:WorkflowViewState.IdRef="Delay_3" />
+
+    <InvokeWorkflowFile DisplayName="Navigate to List for Verification" WorkflowFileName="Workflows\Common\NavigateToQATestSeries.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Route">[in_QATestSeriesRoute]</InArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <Delay DisplayName="Wait for Page Refresh" Duration="[TimeSpan.FromSeconds(2)]" sap2010:WorkflowViewState.IdRef="Delay_4" />
+
+    <!-- Refresh page with F5 -->
+    <ui:SendHotkey DisplayName="Refresh Page (F5)" Key="F5" sap2010:WorkflowViewState.IdRef="SendHotkey_1">
+      <ui:SendHotkey.Target>
+        <ui:Target Selector="&lt;html app='chrome' /&gt;" TimeoutMS="5000" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+
+    <Delay DisplayName="Wait After Refresh" Duration="[TimeSpan.FromSeconds(2)]" sap2010:WorkflowViewState.IdRef="Delay_5" />
+
+    <!-- Verify updated name exists in grid -->
+    <InvokeWorkflowFile DisplayName="Verify Updated Record Exists" WorkflowFileName="Workflows\PageActions\FindTestSeriesByName.xaml" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13">
+      <InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TestSeriesName">[var_UpdatedName]</InArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_RowFound">[var_RowFound]</OutArgument>
+      </InvokeWorkflowFile.Arguments>
+    </InvokeWorkflowFile>
+
+    <WriteLine DisplayName="Log Success" Text="[&quot;TC PASSED: Edit verified for: &quot; &amp; var_UpdatedName]" sap2010:WorkflowViewState.IdRef="WriteLine_1" />
+
+  </Sequence>
+</Activity>

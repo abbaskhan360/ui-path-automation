@@ -1,0 +1,39 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VerifyMandatoryFieldAsterisk"
+  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+  xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+  xmlns:ui="http://schemas.uipath.com/workflow/activities"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FieldName" Type="InArgument(x:String)" />
+    <x:Property Name="out_IsVisible" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <mva:VisualBasicSettings>
+      <mva:VisualBasicSettings.ImportReferences>
+        <mva:VisualBasicImportReference Import="System" Assembly="mscorlib" />
+        <mva:VisualBasicImportReference Import="UiPath.Core" Assembly="UiPath.Core" />
+        <mva:VisualBasicImportReference Import="UiPath.Core.Activities" Assembly="UiPath.Core.Activities" />
+      </mva:VisualBasicSettings.ImportReferences>
+    </mva:VisualBasicSettings>
+  </mva:VisualBasic.Settings>
+  <Sequence DisplayName="Verify Mandatory Field Has Asterisk" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
+    <!-- Check if label with asterisk exists (e.g., "Business Unit(s) *", "Law/Regulation *") -->
+    <ui:ElementExists DisplayName="Check Mandatory Label with Asterisk" Result="[out_IsVisible]" sap2010:WorkflowViewState.IdRef="ElementExists_1">
+      <ui:ElementExists.Target>
+        <ui:Target Selector="[&quot;&lt;html app='chrome' /&gt;&lt;webctrl tag='LABEL' innertext='&quot; &amp; in_FieldName &amp; &quot; *' /&gt;&quot;]" TimeoutMS="50000" />
+      </ui:ElementExists.Target>
+    </ui:ElementExists>
+
+    <!-- Throw if asterisk label not found -->
+    <If Condition="[Not out_IsVisible]" DisplayName="Assert Asterisk Label Exists" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Throw DisplayName="Throw - Mandatory Asterisk Not Found" Exception="[New System.Exception(&quot;Mandatory asterisk (*) not found for field: &quot; &amp; in_FieldName)]" sap2010:WorkflowViewState.IdRef="Throw_1" />
+      </If.Then>
+    </If>
+
+  </Sequence>
+</Activity>

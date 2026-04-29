@@ -253,7 +253,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="706,3450.4" sap2010:WorkflowViewState.IdRef="Sequence_37">
+  <Sequence sap:VirtualizedContainerService.HintSize="786.8000000000001,3343.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
@@ -269,65 +269,99 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="451.2,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_4" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(3)" sap:VirtualizedContainerService.HintSize="451.2,3348.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" ScopeGuid="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V2">
+    <ui:ManualTrigger DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="451.2,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_4" Result="{x:Null}" />
+    <uix:NApplicationCard AttachMode="ByInstance" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome Predict 360(3)" sap:VirtualizedContainerService.HintSize="451.2,3241.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,3227.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,3120" sap2010:WorkflowViewState.IdRef="Sequence_36">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick DisplayName="Click ''Create Action Plan''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_53" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click ''Create Action Plan''" sap:VirtualizedContainerService.HintSize="416,86.4" sap2010:WorkflowViewState.IdRef="NClick_53" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_432" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_432" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ActivateBefore>
               <uix:NClick.ClickType>
                 <InArgument x:TypeArguments="uix:NClickType">
-                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_430" />
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_430">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickType" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ClickType>
               <uix:NClick.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_434" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_434">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.HealingAgentBehavior>
               <uix:NClick.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_433" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_433">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.InteractionMode>
               <uix:NClick.KeyModifiers>
                 <InArgument x:TypeArguments="uix:NKeyModifiers">
-                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_429" />
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_429">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NKeyModifiers" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.KeyModifiers>
               <uix:NClick.MouseButton>
                 <InArgument x:TypeArguments="uix:NMouseButton">
-                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_431" />
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_431">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.MouseButton>
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="383, 381, 142, 23" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="1b1a5642-c2e3-486c-9740-82ef81731d95" InformativeScreenshot="8b81e8f46aec769cb96572e16615ec7f.jpg" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_503" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_503" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_505">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl parentid='assign-issue12' tag='SPAN' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_505">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl parentid='assign-issue12' tag='SPAN' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_506">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl parentid='assign-issue12' tag='SPAN' type='' class='trigger-label' aaname='Create Action Plan' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Create Action Plan' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_506">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl parentid='assign-issue12' tag='SPAN' type='' class='trigger-label' aaname='Create Action Plan' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Create Action Plan' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -335,41 +369,68 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_504">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_504">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto DisplayName="Type Into ''Issue Type Required''" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NTypeInto AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into ''Issue Type Required''" sap:VirtualizedContainerService.HintSize="416,94.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" SecureText="{x:Null}" Timeout="{x:Null}" Version="V5">
               <uix:NTypeInto.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_436" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_436" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.ActivateBefore>
               <uix:NTypeInto.ClickBeforeMode>
                 <InArgument x:TypeArguments="uix:NClickMode">
-                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_437" Value="Single" />
+                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_437" Value="Single">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.ClickBeforeMode>
               <uix:NTypeInto.ClipboardMode>
                 <InArgument x:TypeArguments="uix:NTypeByClipboardMode">
-                  <Literal x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="Literal`1_439" />
+                  <Literal x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="Literal`1_439">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NTypeByClipboardMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.ClipboardMode>
               <uix:NTypeInto.EmptyFieldMode>
                 <InArgument x:TypeArguments="uix:NEmptyFieldMode">
-                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_438" Value="SingleLine" />
+                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_438" Value="SingleLine">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NEmptyFieldMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.EmptyFieldMode>
               <uix:NTypeInto.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_441" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_441">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.HealingAgentBehavior>
               <uix:NTypeInto.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_440" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_440">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.InteractionMode>
               <uix:NTypeInto.Target>
@@ -379,12 +440,22 @@
                       <uix:Target DesignTimeRectangle="537, 420, 163, 31" ElementType="Text" Guid="17305393-d07d-4212-a6cf-2eda04a1593e" SearchSteps="FuzzySelector">
                         <uix:Target.FullSelectorArgument>
                           <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_551" xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Issue Type  ' parentid='dialog-form' tag='LABEL' /&gt;</Literal>
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_551">
+                              <Literal.Result>
+                                <OutArgument x:TypeArguments="x:String" />
+                              </Literal.Result>
+                              <x:String xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Issue Type  ' parentid='dialog-form' tag='LABEL' /&gt;</x:String>
+                            </Literal>
                           </InArgument>
                         </uix:Target.FullSelectorArgument>
                         <uix:Target.FuzzySelectorArgument>
                           <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_552" xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Issue Type  ' parentid='dialog-form' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Issue Type&amp;#xA;Required' /&gt;</Literal>
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_552">
+                              <Literal.Result>
+                                <OutArgument x:TypeArguments="x:String" />
+                              </Literal.Result>
+                              <x:String xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Issue Type  ' parentid='dialog-form' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Issue Type&amp;#xA;Required' /&gt;</x:String>
+                            </Literal>
                           </InArgument>
                         </uix:Target.FuzzySelectorArgument>
                       </uix:Target>
@@ -392,17 +463,27 @@
                   </uix:TargetAnchorable.Anchors>
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_507" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_507" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_509">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='issuetype-field' tag='INPUT' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_509">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='issuetype-field' tag='INPUT' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_510">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='issuetype-field' tag='INPUT' type='text' class='text aui-ss-field ajs-dirty-warning-exempt' aaname='Issue Type Required ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_510">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='issuetype-field' tag='INPUT' type='text' class='text aui-ss-field ajs-dirty-warning-exempt' aaname='Issue Type Required ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -410,14 +491,20 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_508">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_508">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
               <uix:NTypeInto.Text>
                 <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_435">Action Plan</Literal>
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_435">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </Literal.Result>Action Plan</Literal>
                 </InArgument>
               </uix:NTypeInto.Text>
               <uix:NTypeInto.VerifyOptions>
@@ -431,52 +518,86 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick DisplayName="Click ''Action Plan''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_54" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click ''Action Plan''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_54" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_445" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_445" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ActivateBefore>
               <uix:NClick.ClickType>
                 <InArgument x:TypeArguments="uix:NClickType">
-                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_443" />
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_443">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickType" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ClickType>
               <uix:NClick.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_447" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_447">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.HealingAgentBehavior>
               <uix:NClick.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_446" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_446">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.InteractionMode>
               <uix:NClick.KeyModifiers>
                 <InArgument x:TypeArguments="uix:NKeyModifiers">
-                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_442" />
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_442">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NKeyModifiers" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.KeyModifiers>
               <uix:NClick.MouseButton>
                 <InArgument x:TypeArguments="uix:NMouseButton">
-                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_444" />
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_444">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.MouseButton>
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="719, 463, 750, 33" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="e4742657-fd6a-4afa-92a3-6ad5b84379d2" InformativeScreenshot="ab5eefceb9e13178be321799e6b1eb06.jpg" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_511" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_511" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_513">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tag='A' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_513">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tag='A' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_514">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aria-role='presentation' tag='A' type='' class='aui-list-item-link aui-iconised-link' aaname='Action Plan' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Action Plan' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_514">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aria-role='presentation' tag='A' type='' class='aui-list-item-link aui-iconised-link' aaname='Action Plan' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Action Plan' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -484,42 +605,69 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_512">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_512">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
             <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <uix:NTypeInto DisplayName="Type Into ''Summary Required''" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NTypeInto AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into ''Summary Required''" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_17" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" SecureText="{x:Null}" Timeout="{x:Null}" Version="V5">
               <uix:NTypeInto.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_449" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_449" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.ActivateBefore>
               <uix:NTypeInto.ClickBeforeMode>
                 <InArgument x:TypeArguments="uix:NClickMode">
-                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_450" Value="Single" />
+                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_450" Value="Single">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.ClickBeforeMode>
               <uix:NTypeInto.ClipboardMode>
                 <InArgument x:TypeArguments="uix:NTypeByClipboardMode">
-                  <Literal x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="Literal`1_452" />
+                  <Literal x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="Literal`1_452">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NTypeByClipboardMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.ClipboardMode>
               <uix:NTypeInto.EmptyFieldMode>
                 <InArgument x:TypeArguments="uix:NEmptyFieldMode">
-                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_451" Value="SingleLine" />
+                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_451" Value="SingleLine">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NEmptyFieldMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.EmptyFieldMode>
               <uix:NTypeInto.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_454" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_454">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.HealingAgentBehavior>
               <uix:NTypeInto.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_453" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_453">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NTypeInto.InteractionMode>
               <uix:NTypeInto.Target>
@@ -529,12 +677,22 @@
                       <uix:Target DesignTimeRectangle="537, 501, 163, 31" ElementType="Text" Guid="14e17b25-1ab7-4d67-a84e-10e66c2ec15e" SearchSteps="FuzzySelector">
                         <uix:Target.FullSelectorArgument>
                           <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_553" xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Summary  ' parentid='dialog-form' tag='LABEL' /&gt;</Literal>
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_553">
+                              <Literal.Result>
+                                <OutArgument x:TypeArguments="x:String" />
+                              </Literal.Result>
+                              <x:String xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Summary  ' parentid='dialog-form' tag='LABEL' /&gt;</x:String>
+                            </Literal>
                           </InArgument>
                         </uix:Target.FullSelectorArgument>
                         <uix:Target.FuzzySelectorArgument>
                           <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_554" xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Summary  ' parentid='dialog-form' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Summary&amp;#xA;Required' /&gt;</Literal>
+                            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_554">
+                              <Literal.Result>
+                                <OutArgument x:TypeArguments="x:String" />
+                              </Literal.Result>
+                              <x:String xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Summary  ' parentid='dialog-form' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Summary&amp;#xA;Required' /&gt;</x:String>
+                            </Literal>
                           </InArgument>
                         </uix:Target.FuzzySelectorArgument>
                       </uix:Target>
@@ -542,17 +700,27 @@
                   </uix:TargetAnchorable.Anchors>
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_515" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_515" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_517">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='summary' tag='INPUT' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_517">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='summary' tag='INPUT' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_518">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='summary' tag='INPUT' type='text' class='text long-field' aaname='Summary Required ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_518">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='summary' tag='INPUT' type='text' class='text long-field' aaname='Summary Required ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -560,14 +728,20 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_516">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_516">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
               <uix:NTypeInto.Text>
                 <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_448">test action plan</Literal>
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_448">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </Literal.Result>test action plan</Literal>
                 </InArgument>
               </uix:NTypeInto.Text>
               <uix:NTypeInto.VerifyOptions>
@@ -581,82 +755,132 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '.mce-content-body div.m…(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_62" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click '.mce-content-body div.m…(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_62" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" ContentHash="Rp1_ByajQE2vKnWC7f5y_Q" DesignTimeRectangle="721, 465, 745, 25" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='mce_7_ifr' tag='IFRAME' /&gt;&lt;webctrl id='tinymce' tag='BODY' class='mce-content-body ' /&gt;" Guid="0bd5d78e-8c4a-446a-8f7b-e8fce26a1af3" InformativeScreenshot="8cc48340b14c43e857f5bf1d4a49561a.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/ZVZAtIfk2U-nnOewtkyLJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NKeyboardShortcuts DisplayName="Click TinyMCE Editor" sap:VirtualizedContainerService.HintSize="416,328.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Enter)][u(hk)]" Version="V5">
+            <uix:NKeyboardShortcuts ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayBetweenShortcuts="{x:Null}" DisplayName="Click TinyMCE Editor" sap:VirtualizedContainerService.HintSize="416,328.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Enter)][u(hk)]" ShortcutsArgument="{x:Null}" Timeout="{x:Null}" Version="V5">
               <uix:NKeyboardShortcuts.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_455" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_455" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NKeyboardShortcuts.ActivateBefore>
               <uix:NKeyboardShortcuts.ClickBeforeMode>
                 <InArgument x:TypeArguments="uix:NClickMode">
-                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_456" />
+                  <Literal x:TypeArguments="uix:NClickMode" sap2010:WorkflowViewState.IdRef="Literal`1_456">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NKeyboardShortcuts.ClickBeforeMode>
               <uix:NKeyboardShortcuts.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_458" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_458">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NKeyboardShortcuts.HealingAgentBehavior>
               <uix:NKeyboardShortcuts.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_457" Value="HardwareEvents" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_457" Value="HardwareEvents">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NKeyboardShortcuts.InteractionMode>
               <uix:NKeyboardShortcuts.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" ContentHash="Rp1_ByajQE2vKnWC7f5y_Q" DesignTimeRectangle="721, 465, 745, 25" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='mce_7_ifr' tag='IFRAME' /&gt;&lt;webctrl id='tinymce' tag='BODY' class='mce-content-body ' /&gt;" Guid="0bd5d78e-8c4a-446a-8f7b-e8fce26a1af3" InformativeScreenshot="8cc48340b14c43e857f5bf1d4a49561a.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/ZVZAtIfk2U-nnOewtkyLJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NKeyboardShortcuts.Target>
             </uix:NKeyboardShortcuts>
-            <uix:NClick DisplayName="Click ''Assign to me''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_55" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click ''Assign to me''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_55" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_462" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_462" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ActivateBefore>
               <uix:NClick.ClickType>
                 <InArgument x:TypeArguments="uix:NClickType">
-                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_460" />
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_460">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickType" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ClickType>
               <uix:NClick.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_464" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_464">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.HealingAgentBehavior>
               <uix:NClick.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_463" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_463">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.InteractionMode>
               <uix:NClick.KeyModifiers>
                 <InArgument x:TypeArguments="uix:NKeyModifiers">
-                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_459" />
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_459">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NKeyModifiers" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.KeyModifiers>
               <uix:NClick.MouseButton>
                 <InArgument x:TypeArguments="uix:NMouseButton">
-                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_461" />
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_461">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.MouseButton>
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="1356, 572, 103, 38" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="abb25581-fb45-4421-8927-c3cc197e5684" InformativeScreenshot="9041e9839950e71e4db366da77a496df.jpg" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_519" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_519" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_521">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_521">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_522">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' type='button' class='aui-button aui-button-link' aaname='Assign to me' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Assign to me' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_522">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' type='button' class='aui-button aui-button-link' aaname='Assign to me' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Assign to me' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -664,13 +888,16 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_520">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_520">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Due Date Required'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_18" InteractionMode="SameAsCard" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Text="7/Apr/2026" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ClipboardMode="Never" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Due Date Required'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_18" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="SameAsCard" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" SecureText="{x:Null}" Text="7/Apr/2026" Timeout="{x:Null}" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" ContentHash="vQQ9RECjkkitYKwrydgErQ" DesignTimeRectangle="719, 558, 206, 37" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='duedate' tag='INPUT' type='text' class='text medium-field focus-visible' aaname='Due Date Required ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="30aed5a7-9371-4205-8cb4-bb6fddf5765e" InformativeScreenshot="655cd6853c29bb4bef90808631d0bca3.jpg" IsResponsive="True" Reference="bd5X-P2TIE2AKa4vHZdOPQ/3TIdecf0QkCx35JzwOeBww" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -691,52 +918,88 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick DisplayName="Click ''UL''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_58" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click ''UL''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_58" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_480" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_480" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ActivateBefore>
               <uix:NClick.ClickType>
                 <InArgument x:TypeArguments="uix:NClickType">
-                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_478" />
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_478">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickType" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ClickType>
               <uix:NClick.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_482" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_482">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.HealingAgentBehavior>
               <uix:NClick.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_481" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_481">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.InteractionMode>
               <uix:NClick.KeyModifiers>
                 <InArgument x:TypeArguments="uix:NKeyModifiers">
-                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_477" />
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_477">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NKeyModifiers" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.KeyModifiers>
               <uix:NClick.MouseButton>
                 <InArgument x:TypeArguments="uix:NMouseButton">
-                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_479" />
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_479">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.MouseButton>
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="719, 489, 625, 36" DesignTimeScaleFactor="1.25" ElementType="List" Guid="9e2c1c98-56db-4381-b164-9efcbc98c774" InformativeScreenshot="20a9c543542bece22db86739eb7b2692.jpg" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_531" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_531" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_533">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul' parentname='jiraform' tag='UL' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_533">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul' parentname='jiraform' tag='UL' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_534" xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl type='' parentname='jiraform' tag='UL' class='select2-choices' aaname='  ' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_534">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>
+                        <x:String xml:space="preserve">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl type='' parentname='jiraform' tag='UL' class='select2-choices' aaname='  ' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;</x:String>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -744,58 +1007,95 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_532">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_532">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick DisplayName="Click ''audit''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_59" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click ''audit''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_59" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_486" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_486" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ActivateBefore>
               <uix:NClick.ClickType>
                 <InArgument x:TypeArguments="uix:NClickType">
-                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_484" />
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_484">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickType" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ClickType>
               <uix:NClick.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_488" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_488">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.HealingAgentBehavior>
               <uix:NClick.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_487" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_487">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.InteractionMode>
               <uix:NClick.KeyModifiers>
                 <InArgument x:TypeArguments="uix:NKeyModifiers">
-                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_483" />
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_483">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NKeyModifiers" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.KeyModifiers>
               <uix:NClick.MouseButton>
                 <InArgument x:TypeArguments="uix:NMouseButton">
-                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_485" />
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_485">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.MouseButton>
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="721, 723, 602, 38" DesignTimeScaleFactor="1.25" Guid="a35c8405-a419-49bf-b8cf-9a3c1a91e3a3" InformativeScreenshot="a6e598c59e9a8527839320212f463527.jpg" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_535" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_535" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_537">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='audit' tag='DIV' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_537">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='audit' tag='DIV' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_538">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='audit' tag='DIV' type='' class='select2-result-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='audit' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_538">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='audit' tag='DIV' type='' class='select2-result-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='audit' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -803,58 +1103,95 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_536">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_536">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick DisplayName="Click ''Create''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_60" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click ''Create''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_60" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_492" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_492" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ActivateBefore>
               <uix:NClick.ClickType>
                 <InArgument x:TypeArguments="uix:NClickType">
-                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_490" />
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_490">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickType" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ClickType>
               <uix:NClick.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_494" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_494">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.HealingAgentBehavior>
               <uix:NClick.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_493" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_493">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.InteractionMode>
               <uix:NClick.KeyModifiers>
                 <InArgument x:TypeArguments="uix:NKeyModifiers">
-                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_489" />
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_489">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NKeyModifiers" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.KeyModifiers>
               <uix:NClick.MouseButton>
                 <InArgument x:TypeArguments="uix:NMouseButton">
-                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_491" />
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_491">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.MouseButton>
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="1331, 785, 78, 38" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="1c9054ad-14e1-40e0-9711-7edef82c372b" InformativeScreenshot="f1dc84c74f13dd93dbf45cfc99e397c1.jpg" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_539" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_539" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_541">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='create-issue-submit' tag='INPUT' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_541">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='create-issue-submit' tag='INPUT' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_542">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='create-issue-submit' tag='INPUT' type='submit' class='aui-button aui-button-primary' aaname='Press Alt+s to submit this form' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='Create' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_542">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='create-issue-submit' tag='INPUT' type='submit' class='aui-button aui-button-primary' aaname='Press Alt+s to submit this form' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='Create' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -862,59 +1199,96 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_540">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_540">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
             <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <uix:NClick DisplayName="Click ''test action plan''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_61" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click ''test action plan''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_61" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_498" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_498" Value="True">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:Boolean" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ActivateBefore>
               <uix:NClick.ClickType>
                 <InArgument x:TypeArguments="uix:NClickType">
-                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_496" />
+                  <Literal x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="Literal`1_496">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NClickType" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.ClickType>
               <uix:NClick.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_500" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_500">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.HealingAgentBehavior>
               <uix:NClick.InteractionMode>
                 <InArgument x:TypeArguments="uix:NChildInteractionMode">
-                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_499" />
+                  <Literal x:TypeArguments="uix:NChildInteractionMode" sap2010:WorkflowViewState.IdRef="Literal`1_499">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildInteractionMode" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.InteractionMode>
               <uix:NClick.KeyModifiers>
                 <InArgument x:TypeArguments="uix:NKeyModifiers">
-                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_495" />
+                  <Literal x:TypeArguments="uix:NKeyModifiers" sap2010:WorkflowViewState.IdRef="Literal`1_495">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NKeyModifiers" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.KeyModifiers>
               <uix:NClick.MouseButton>
                 <InArgument x:TypeArguments="uix:NMouseButton">
-                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_497" />
+                  <Literal x:TypeArguments="uix:NMouseButton" sap2010:WorkflowViewState.IdRef="Literal`1_497">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NMouseButton" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NClick.MouseButton>
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="236, 608, 119, 23" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="01c59dce-f822-471e-82b2-d0e4dad1670b" InformativeScreenshot="37ac23140fa8455ce4cb1ed590138889.jpg" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_543" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_543" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_545">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='issuetable' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_545">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='issuetable' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.FuzzySelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_546">&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='issuetable' tag='TABLE' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl type='' tag='A' class='issue-link' aaname='test action plan' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='test action plan' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_546">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='issuetable' tag='TABLE' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl type='' tag='A' class='issue-link' aaname='test action plan' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='test action plan' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FuzzySelectorArgument>
                   <uix:TargetAnchorable.PointOffset>
@@ -922,38 +1296,59 @@
                   </uix:TargetAnchorable.PointOffset>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_544">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_544">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NGetText DisplayName="Get Text 'Action Plan'" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Get Text 'Action Plan'" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_7" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" ScrapingOptions="{x:Null}" TextString="{x:Null}" Timeout="{x:Null}" Version="V5" WordsInfo="{x:Null}">
               <uix:NGetText.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
-                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_501" />
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_501">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </uix:NGetText.HealingAgentBehavior>
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" ContentHash="MPM_UieEF0e1P1WFDQGgVQ" DesignTimeRectangle="637, 283, 96, 23" ElementType="Text" Guid="56d91fcf-a356-4e7a-a726-1e9c681f3236" InformativeScreenshot="c1d0445dcd27978e52e52ecbccddce4f.jpg" Reference="bd5X-P2TIE2AKa4vHZdOPQ/cPTIH74NRUyQO1g7A7HEzw" SearchSteps="Selector" Version="V6">
                   <uix:TargetAnchorable.ElementVisibilityArgument>
                     <InArgument x:TypeArguments="uix:NElementVisibility">
-                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_547" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NElementVisibility" sap2010:WorkflowViewState.IdRef="Literal`1_547" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NElementVisibility" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ElementVisibilityArgument>
                   <uix:TargetAnchorable.FullSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_550">&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='key-val' tag='A' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_550">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='key-val' tag='A' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.FullSelectorArgument>
                   <uix:TargetAnchorable.ScopeSelectorArgument>
                     <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_548">&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_548">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="x:String" />
+                        </Literal.Result>&lt;html app='chrome.exe' title='Predict 360' /&gt;</Literal>
                     </InArgument>
                   </uix:TargetAnchorable.ScopeSelectorArgument>
                   <uix:TargetAnchorable.WaitForReadyArgument>
                     <InArgument x:TypeArguments="uix:NWaitForReady">
-                      <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_549" Value="Interactive" />
+                      <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_549" Value="Interactive">
+                        <Literal.Result>
+                          <OutArgument x:TypeArguments="uix:NWaitForReady" />
+                        </Literal.Result>
+                      </Literal>
                     </InArgument>
                   </uix:TargetAnchorable.WaitForReadyArgument>
                 </uix:TargetAnchorable>
@@ -962,12 +1357,20 @@
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6">
               <ui:LogMessage.Level>
                 <InArgument x:TypeArguments="ui:LogLevel">
-                  <Literal x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="Literal`1_502" Value="Info" />
+                  <Literal x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="Literal`1_502" Value="Info">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="ui:LogLevel" />
+                    </Literal.Result>
+                  </Literal>
                 </InArgument>
               </ui:LogMessage.Level>
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
-                  <VisualBasicValue x:TypeArguments="x:Object" ExpressionText="String.Format(&quot;Action Plan Created: {0}&quot;, variable1)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+                  <VisualBasicValue x:TypeArguments="x:Object" ExpressionText="String.Format(&quot;Action Plan Created: {0}&quot;, variable1)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2">
+                    <VisualBasicValue.Result>
+                      <OutArgument x:TypeArguments="x:Object" />
+                    </VisualBasicValue.Result>
+                  </VisualBasicValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
@@ -976,12 +1379,20 @@
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.CloseMode>
         <InArgument x:TypeArguments="uix:NAppCloseMode">
-          <Literal x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="Literal`1_425" />
+          <Literal x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="Literal`1_425">
+            <Literal.Result>
+              <OutArgument x:TypeArguments="uix:NAppCloseMode" />
+            </Literal.Result>
+          </Literal>
         </InArgument>
       </uix:NApplicationCard.CloseMode>
       <uix:NApplicationCard.HealingAgentBehavior>
         <InArgument x:TypeArguments="uix:NHealingAgentBehavior">
-          <Literal x:TypeArguments="uix:NHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_426" />
+          <Literal x:TypeArguments="uix:NHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_426">
+            <Literal.Result>
+              <OutArgument x:TypeArguments="uix:NHealingAgentBehavior" />
+            </Literal.Result>
+          </Literal>
         </InArgument>
       </uix:NApplicationCard.HealingAgentBehavior>
       <uix:NApplicationCard.OCREngine>
@@ -993,7 +1404,11 @@
       </uix:NApplicationCard.OCREngine>
       <uix:NApplicationCard.OpenMode>
         <InArgument x:TypeArguments="uix:NAppOpenMode">
-          <Literal x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="Literal`1_424" Value="IfNotOpen" />
+          <Literal x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="Literal`1_424" Value="IfNotOpen">
+            <Literal.Result>
+              <OutArgument x:TypeArguments="uix:NAppOpenMode" />
+            </Literal.Result>
+          </Literal>
         </InArgument>
       </uix:NApplicationCard.OpenMode>
       <uix:NApplicationCard.TargetApp>

@@ -1,0 +1,81 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SelectClosingMemoTemplate"
+  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+  xmlns:s="clr-namespace:System;assembly=mscorlib"
+  xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+  xmlns:ui="http://schemas.uipath.com/workflow/activities"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_DocumentName" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <mva:VisualBasicSettings>
+      <mva:VisualBasicSettings.ImportReferences>
+        <mva:VisualBasicImportReference Import="System" Assembly="mscorlib" />
+        <mva:VisualBasicImportReference Import="UiPath.Core" Assembly="UiPath.Core" />
+        <mva:VisualBasicImportReference Import="UiPath.Core.Activities" Assembly="UiPath.Core.Activities" />
+      </mva:VisualBasicSettings.ImportReferences>
+    </mva:VisualBasicSettings>
+  </mva:VisualBasic.Settings>
+  <Sequence DisplayName="Select Closing Memo Template Document" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="var_ModalVisible" Default="False" />
+    </Sequence.Variables>
+
+    <!-- Step 1: Click Select Document button -->
+    <ui:Click DisplayName="Click Select Document Button" sap2010:WorkflowViewState.IdRef="Click_1">
+      <ui:Click.Target>
+        <ui:Target Selector="&lt;html app='chrome' /&gt;&lt;webctrl id='selectDocBtn' /&gt;" TimeoutMS="50000" />
+      </ui:Click.Target>
+    </ui:Click>
+
+    <!-- Step 2: Wait for modal to appear -->
+    <ui:ElementExists DisplayName="Wait for Document Modal" Result="[var_ModalVisible]" sap2010:WorkflowViewState.IdRef="ElementExists_1">
+      <ui:ElementExists.Target>
+        <ui:Target Selector="&lt;html app='chrome' /&gt;&lt;webctrl id='folderDocumentTree' /&gt;" TimeoutMS="50000" />
+      </ui:ElementExists.Target>
+    </ui:ElementExists>
+
+    <Delay DisplayName="Wait for Modal Content" Duration="[TimeSpan.FromMilliseconds(500)]" sap2010:WorkflowViewState.IdRef="Delay_1" />
+
+    <!-- Step 3: Verify modal title -->
+    <ui:ElementExists DisplayName="Verify Modal Title Visible" Result="[var_ModalVisible]" sap2010:WorkflowViewState.IdRef="ElementExists_2">
+      <ui:ElementExists.Target>
+        <ui:Target Selector="&lt;html app='chrome' /&gt;&lt;webctrl tag='H5' innertext='Select Document' /&gt;" TimeoutMS="50000" />
+      </ui:ElementExists.Target>
+    </ui:ElementExists>
+
+    <!-- Step 4: Click the document by name -->
+    <ui:Click DisplayName="Select Document from Modal" sap2010:WorkflowViewState.IdRef="Click_2">
+      <ui:Click.Target>
+        <ui:Target Selector="[&quot;&lt;html app='chrome' /&gt;&lt;webctrl id='folderDocumentTree' /&gt;&lt;webctrl innertext='&quot; &amp; in_DocumentName &amp; &quot;' /&gt;&quot;]" TimeoutMS="50000" />
+      </ui:Click.Target>
+    </ui:Click>
+
+    <Delay DisplayName="Wait After Document Selection" Duration="[TimeSpan.FromMilliseconds(500)]" sap2010:WorkflowViewState.IdRef="Delay_2" />
+
+    <!-- Step 5: Click Add button in modal -->
+    <ui:Click DisplayName="Click Modal Add Button" sap2010:WorkflowViewState.IdRef="Click_3">
+      <ui:Click.Target>
+        <ui:Target Selector="&lt;html app='chrome' /&gt;&lt;webctrl tag='BUTTON' innertext='Add' /&gt;" TimeoutMS="50000" />
+      </ui:Click.Target>
+    </ui:Click>
+
+    <!-- Step 6: Wait for modal to close -->
+    <TryCatch DisplayName="Try Wait for Modal Close" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Wait Modal Hidden">
+          <Delay DisplayName="Wait for Modal Animation" Duration="[TimeSpan.FromSeconds(2)]" sap2010:WorkflowViewState.IdRef="Delay_3" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" />
+      </TryCatch.Catches>
+    </TryCatch>
+
+    <Delay DisplayName="Wait After Modal Close" Duration="[TimeSpan.FromMilliseconds(500)]" sap2010:WorkflowViewState.IdRef="Delay_4" />
+
+  </Sequence>
+</Activity>

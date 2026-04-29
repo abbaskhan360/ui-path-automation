@@ -1,0 +1,38 @@
+{
+  "name": "QATestSeries_Automation",
+  "projectId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "description": "QA Test Series automation converted from Playwright scripts",
+  "main": "Workflows/TestCases/TC_CreateQATestSeries.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[23.10.6]",
+    "UiPath.UIAutomation.Activities": "[23.10.8]",
+    "UiPath.Testing.Activities": "[23.10.4]",
+    "UiPath.Excel.Activities": "[2.23.6]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.6.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFramework": false,
+    "readyToRun": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": ["Private:*", "*password*"]
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    }
+  },
+  "expressionLanguage": "VisualBasic",
+  "targetFramework": "Windows"
+}
