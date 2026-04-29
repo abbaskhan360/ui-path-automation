@@ -248,11 +248,6 @@
       <Variable x:TypeArguments="x:String" Name="variable1" />
       <Variable x:TypeArguments="x:String" Name="currentUrl" />
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
-      <Variable x:TypeArguments="x:String" Name="UiPathEventConnector" />
-      <Variable x:TypeArguments="x:String" Name="UiPathEvent" />
-      <Variable x:TypeArguments="x:String" Name="UiPathEventObjectType" />
-      <Variable x:TypeArguments="x:String" Name="UiPathEventObjectId" />
-      <Variable x:TypeArguments="x:String" Name="UiPathAdditionalEventData" />
       <Variable x:TypeArguments="x:Int32" Name="reportId" />
       <Variable x:TypeArguments="x:String" Name="suiteId" />
       <Variable x:TypeArguments="x:String" Name="testid">
@@ -283,11 +278,6 @@
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Login - Invoke Workflow File (Login.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Login.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_BrowserSession">[out_BrowserSession]</OutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="UiPathAdditionalEventData">[UiPathAdditionalEventData]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="UiPathEvent">[UiPathEvent]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="UiPathEventConnector">[UiPathEventConnector]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="UiPathEventObjectId">[UiPathEventObjectId]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="UiPathEventObjectType">[UiPathEventObjectType]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="StepStatus_2" ReportId="[reportId]" Status="Pass" StepDescription="User is logged in the System.!" StepName="User Logged in Succesfully" TakeScreenshot="False" TestId="[testid]" />
