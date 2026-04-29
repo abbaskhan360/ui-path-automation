@@ -1,27 +1,7 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
-    <x:Property Name="UiPathAdditionalEventData" Type="InArgument(x:String)" />
     <x:Property Name="out_BrowserSession" Type="OutArgument(ui:UiElement)" />
   </x:Members>
-  <this:Login.UiPathEventConnector>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Login.UiPathEventConnector>
-  <this:Login.UiPathEvent>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Login.UiPathEvent>
-  <this:Login.UiPathEventObjectType>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Login.UiPathEventObjectType>
-  <this:Login.UiPathEventObjectId>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Login.UiPathEventObjectId>
-  <this:Login.UiPathAdditionalEventData>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Login.UiPathAdditionalEventData>
   <this:Login.out_BrowserSession>
     <OutArgument x:TypeArguments="ui:UiElement" />
   </this:Login.out_BrowserSession>
@@ -257,7 +237,7 @@
       <AssemblyReference>Microsoft.CodeAnalysis.CSharp</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="814,3859.2" sap2010:WorkflowViewState.IdRef="Sequence_39">
+  <Sequence sap:VirtualizedContainerService.HintSize="814,3780.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="urlMatchResult" />
       <Variable x:TypeArguments="x:Boolean" Name="textMatchResult" />
@@ -273,8 +253,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ManualTrigger DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="521.6,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_13" Result="{x:Null}" />
-    <uix:NApplicationCard AttachMode="ByInstance" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome New Tab" sap:VirtualizedContainerService.HintSize="521.6,3757.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" ScopeGuid="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" sap:VirtualizedContainerService.HintSize="521.6,3757.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" ScopeGuid="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -286,7 +265,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Navigate to the login URL." sap:VirtualizedContainerService.HintSize="486.4,122.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Timeout="{x:Null}" Version="V5">
+            <uix:NGoToUrl DisplayName="Navigate to the login URL." sap:VirtualizedContainerService.HintSize="486.4,78.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
               <uix:NGoToUrl.Url>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_6">
@@ -304,7 +283,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState CheckWindowActive="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Wait for the username input field to appear." Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="451.2,524" sap2010:WorkflowViewState.IdRef="NCheckState_2" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
+                  <uix:NCheckState DisplayName="Wait for the username input field to appear." sap:VirtualizedContainerService.HintSize="451.2,524" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
                     <uix:NCheckState.HealingAgentBehavior>
                       <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
                         <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_8" Value="Disabled">
@@ -389,7 +368,7 @@
                       </InArgument>
                     </uix:NCheckState.Timeout>
                   </uix:NCheckState>
-                  <uix:NTypeInto AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type the username into the username field." sap:VirtualizedContainerService.HintSize="451.2,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_37" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" SecureText="{x:Null}" Timeout="{x:Null}" Version="V5">
+                  <uix:NTypeInto DisplayName="Type the username into the username field." sap:VirtualizedContainerService.HintSize="451.2,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_37" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
                     <uix:NTypeInto.ActivateBefore>
                       <InArgument x:TypeArguments="x:Boolean">
                         <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_10" Value="True">
@@ -539,7 +518,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NTypeInto AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type the password into the password field." sap:VirtualizedContainerService.HintSize="451.2,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_38" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" SecureText="{x:Null}" Timeout="{x:Null}" Version="V5">
+                  <uix:NTypeInto DisplayName="Type the password into the password field." sap:VirtualizedContainerService.HintSize="451.2,317.6" sap2010:WorkflowViewState.IdRef="NTypeInto_38" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
                     <uix:NTypeInto.ActivateBefore>
                       <InArgument x:TypeArguments="x:Boolean">
                         <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_17" Value="True">
@@ -689,7 +668,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NTypeInto AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type the customer key into the customer key field." sap:VirtualizedContainerService.HintSize="451.2,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_39" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" SecureText="{x:Null}" Timeout="{x:Null}" Version="V5">
+                  <uix:NTypeInto DisplayName="Type the customer key into the customer key field." sap:VirtualizedContainerService.HintSize="451.2,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_39" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
                     <uix:NTypeInto.ActivateBefore>
                       <InArgument x:TypeArguments="x:Boolean">
                         <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_24" Value="True">
@@ -801,7 +780,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NClick AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click the Login button." sap:VirtualizedContainerService.HintSize="451.2,312" sap2010:WorkflowViewState.IdRef="NClick_14" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
+                  <uix:NClick DisplayName="Click the Login button." sap:VirtualizedContainerService.HintSize="451.2,312" sap2010:WorkflowViewState.IdRef="NClick_14" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
                     <uix:NClick.ActivateBefore>
                       <InArgument x:TypeArguments="x:Boolean">
                         <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_33" Value="True">
@@ -914,7 +893,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Get the welcome text from the profile page." sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_11" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" ScrapingOptions="{x:Null}" Timeout="{x:Null}" Version="V5" WordsInfo="{x:Null}">
+                  <uix:NGetText DisplayName="Get the welcome text from the profile page." sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="619c173f-0fea-473a-b7a9-ed8cfa3086b9" Version="V5">
                     <uix:NGetText.HealingAgentBehavior>
                       <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
                         <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_37">
@@ -1012,7 +991,7 @@
                       </InArgument>
                     </ui:LogMessage.Message>
                   </ui:LogMessage>
-                  <ui:IsMatch DisplayName="Check if the welcome text matches the expected pattern." sap:VirtualizedContainerService.HintSize="451.2,92" sap2010:WorkflowViewState.IdRef="IsMatch_18" IsBuilderTabModified="False" Pattern="Welcome" RegexOption="Singleline" TimeoutMS="{x:Null}">
+                  <ui:IsMatch DisplayName="Check if the welcome text matches the expected pattern." sap:VirtualizedContainerService.HintSize="451.2,92" sap2010:WorkflowViewState.IdRef="IsMatch_18" IsBuilderTabModified="False" Pattern="Welcome" RegexOption="Singleline">
                     <ui:IsMatch.Input>
                       <InArgument x:TypeArguments="x:String">
                         <VisualBasicValue x:TypeArguments="x:String" ExpressionText="variable1" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_4">
