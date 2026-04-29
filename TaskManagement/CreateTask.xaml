@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CreateIssueManagementTicket" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateIssueManagementTicket" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_BrowserSession" Type="InArgument(ui:UiElement)" />
   </x:Members>
@@ -234,7 +234,7 @@
       <AssemblyReference>IssueManagement.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="706,1777.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+  <Sequence sap:VirtualizedContainerService.HintSize="814,2181.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
@@ -250,86 +250,123 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="520,1754.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" ScopeGuid="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,2158.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,1632.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.79999999999995,2055.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL - 360factors.com" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Url="https://stage.360factors.com/predict360/casemanagement.do" Version="V5" />
-            <uix:NHover DisplayName="Hover 'Tasks(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,245.6" HoverTime="8" sap2010:WorkflowViewState.IdRef="NHover_2" InteractionMode="SameAsCard" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
-              <uix:NHover.Target>
-                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" ContentHash="bJv52gt870GRGQbQzogJ9g" DesignTimeRectangle="1175, 198, 77, 38" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='my_bfsi_Event' tag='A' /&gt;" Guid="d8167b1b-bb1e-483f-b1d2-60f6c9b6ae14" InformativeScreenshot="bacf85232b3834e9f0343bd1ba90439f.jpg" Reference="Xn6yMTDkokiEpUSVX9XDMQ/g8iRO1Izk0m2bXcGwmAHjA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
-              </uix:NHover.Target>
-            </uix:NHover>
-            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Task''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="1070, 281, 200, 37" DesignTimeScaleFactor="1.25" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Task' id='website_link_lnk' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Task' id='website_link_lnk' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Task' /&gt;" Guid="b17f4e49-17e6-4290-a55e-03172e0a13e9" InformativeScreenshot="21db0961c88b94c67839894db093ecfe.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
-                  <uix:TargetAnchorable.PointOffset>
-                    <uix:PointOffset />
-                  </uix:TargetAnchorable.PointOffset>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
-            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Summary Required''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Text="test task" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="597, 377, 625, 37" DesignTimeScaleFactor="1.25" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='summary' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='summary' tag='INPUT' type='text' class='text long-field focus-visible' aaname='Summary Required ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="41fb4aca-b34c-48f6-bdbe-3affa946f5c0" InformativeScreenshot="5eea7ca7ecd368491ffbd75442b42a34.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="FuzzySelector" Version="V6">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="415, 377, 163, 31" ElementType="Text" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Summary  ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Summary  ' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Summary&amp;#xA;Required' /&gt;" Guid="9c26cc32-1ee7-4000-849f-2779ab048b1d" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                  <uix:TargetAnchorable.PointOffset>
-                    <uix:PointOffset />
-                  </uix:TargetAnchorable.PointOffset>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-              <uix:NTypeInto.VerifyOptions>
-                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
-                  <uix:VerifyExecutionTypeIntoOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionTypeIntoOptions.Retry>
-                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                </uix:VerifyExecutionTypeIntoOptions>
-              </uix:NTypeInto.VerifyOptions>
-            </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Assign to me''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="1234, 607, 103, 38" DesignTimeScaleFactor="1.25" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' type='button' class='aui-button aui-button-link' aaname='Assign to me' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Assign to me' /&gt;" Guid="1d8a3ad4-750c-46ff-95b0-d43cfc8c458d" InformativeScreenshot="dffe99893d3bcb808dbea72a018ee8f0.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
-                  <uix:TargetAnchorable.PointOffset>
-                    <uix:PointOffset />
-                  </uix:TargetAnchorable.PointOffset>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Create''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="597, 866, 77, 37" DesignTimeScaleFactor="1.25" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='issue-create-submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='issue-create-submit' tag='INPUT' type='submit' class='aui-button' aaname='Press Alt+s to submit this form' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='Create' /&gt;" Guid="da6bc9da-f832-41ce-ba0c-2fddf3d92536" InformativeScreenshot="4e86a45b87c25cb99d88e4b17d2ca799.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
-                  <uix:TargetAnchorable.PointOffset>
-                    <uix:PointOffset />
-                  </uix:TargetAnchorable.PointOffset>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NGetText DisplayName="Get Text ''BCUS-57344''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,133.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="370, 283, 96, 23" DesignTimeScaleFactor="1.25" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='key-val' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='key-val' tag='A' type='' class='issue-link' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="18e05a6f-44bd-4a6a-8fe7-bc120b495b01" InformativeScreenshot="b9bcbdf643c9abd7e0765addc07a9748.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
-                  <uix:TargetAnchorable.PointOffset>
-                    <uix:PointOffset />
-                  </uix:TargetAnchorable.PointOffset>
-                </uix:TargetAnchorable>
-              </uix:NGetText.Target>
-            </uix:NGetText>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,1995.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="449.6,1632.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGoToUrl DisplayName="Go To URL - 360factors.com" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Url="https://stage.360factors.com/predict360/casemanagement.do" Version="V5" />
+                  <uix:NHover DisplayName="Hover 'Tasks(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" HoverTime="8" sap2010:WorkflowViewState.IdRef="NHover_2" InteractionMode="SameAsCard" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
+                    <uix:NHover.Target>
+                      <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" ContentHash="bJv52gt870GRGQbQzogJ9g" DesignTimeRectangle="1175, 198, 77, 38" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='my_bfsi_Event' tag='A' /&gt;" Guid="d8167b1b-bb1e-483f-b1d2-60f6c9b6ae14" InformativeScreenshot="bacf85232b3834e9f0343bd1ba90439f.jpg" Reference="Xn6yMTDkokiEpUSVX9XDMQ/g8iRO1Izk0m2bXcGwmAHjA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NHover.Target>
+                  </uix:NHover>
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Task''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="1070, 281, 200, 37" DesignTimeScaleFactor="1.25" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Task' id='website_link_lnk' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Task' id='website_link_lnk' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Task' /&gt;" Guid="b17f4e49-17e6-4290-a55e-03172e0a13e9" InformativeScreenshot="21db0961c88b94c67839894db093ecfe.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Summary Required''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Text="test task" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="597, 377, 625, 37" DesignTimeScaleFactor="1.25" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='summary' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='summary' tag='INPUT' type='text' class='text long-field focus-visible' aaname='Summary Required ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="41fb4aca-b34c-48f6-bdbe-3affa946f5c0" InformativeScreenshot="5eea7ca7ecd368491ffbd75442b42a34.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="415, 377, 163, 31" ElementType="Text" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl aaname='Summary  ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl aaname='Summary  ' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Summary&amp;#xA;Required' /&gt;" Guid="9c26cc32-1ee7-4000-849f-2779ab048b1d" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Assign to me''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="1234, 607, 103, 38" DesignTimeScaleFactor="1.25" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='assign-to-me-trigger' tag='BUTTON' type='button' class='aui-button aui-button-link' aaname='Assign to me' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Assign to me' /&gt;" Guid="1d8a3ad4-750c-46ff-95b0-d43cfc8c458d" InformativeScreenshot="dffe99893d3bcb808dbea72a018ee8f0.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Create''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="597, 866, 77, 37" DesignTimeScaleFactor="1.25" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='issue-create-submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='issue-create-submit' tag='INPUT' type='submit' class='aui-button' aaname='Press Alt+s to submit this form' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='Create' /&gt;" Guid="da6bc9da-f832-41ce-ba0c-2fddf3d92536" InformativeScreenshot="4e86a45b87c25cb99d88e4b17d2ca799.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NGetText DisplayName="Get Text ''BCUS-57344''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,133.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="daa2f210-57d8-4e9c-a7b6-6a0889d83fec" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/casemanagement.do" DesignTimeRectangle="370, 283, 96, 23" DesignTimeScaleFactor="1.25" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' /&gt;&lt;webctrl id='key-val' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mytarget' tag='IFRAME' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl id='key-val' tag='A' type='' class='issue-link' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="18e05a6f-44bd-4a6a-8fe7-bc120b495b01" InformativeScreenshot="b9bcbdf643c9abd7e0765addc07a9748.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,108" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Rethrow sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </TryCatch.Finally>
+            </TryCatch>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
