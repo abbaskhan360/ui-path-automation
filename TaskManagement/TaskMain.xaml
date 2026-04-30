@@ -239,7 +239,7 @@
       <AssemblyReference>Microsoft.CodeAnalysis.CSharp</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="814,2396" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence sap:VirtualizedContainerService.HintSize="767.6,2396" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="reportData" />
       <Variable x:TypeArguments="s:DateTime" Name="startTime" />
@@ -248,15 +248,19 @@
       <Variable x:TypeArguments="x:String" Name="variable1" />
       <Variable x:TypeArguments="x:String" Name="currentUrl" />
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
+      <Variable x:TypeArguments="x:Int32" Name="reportId" />
+      <Variable x:TypeArguments="x:String" Name="suiteId" />
+      <Variable x:TypeArguments="x:String" Name="loginTest" />
+      <Variable x:TypeArguments="x:String" Name="createTask" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="451.2,166.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="C:\Users\abbas.khan\OneDrive - 360Factors\Desktop\ui-path\ui-path-automation\Reports" ReportName="Create Task Report" isCreated="[GlobalVariablesNamespace.GlobalVariables.reportId]" />
-    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" ReportId="[GlobalVariablesNamespace.GlobalVariables.reportId]" SuiteName="Create Task in CMS Jira" suiteId="[GlobalVariablesNamespace.GlobalVariables.suiteId]" />
-    <ra:StartTest ContinueOnError="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[GlobalVariablesNamespace.GlobalVariables.reportId]" SuiteId="[GlobalVariablesNamespace.GlobalVariables.suiteId]" TagName="login-test" TestName="Verify Login Functionality" testId="[GlobalVariablesNamespace.GlobalVariables.testid]" />
+    <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="451.2,166.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="C:\Users\abbas.khan\OneDrive - 360Factors\Desktop\ui-path\ui-path-automation\Reports" ReportName="Create Task Report" isCreated="[reportId]" />
+    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" ReportId="[reportId]" SuiteName="Create Task in CMS Jira" suiteId="[suiteId]" />
+    <ra:StartTest ContinueOnError="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[reportId]" SuiteId="[suiteId]" TagName="login-test" TestName="Verify Login Functionality" testId="[loginTest]" />
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,931.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="449.6,393.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
@@ -270,7 +274,7 @@
               <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_BrowserSession">[out_BrowserSession]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="StepStatus_2" ReportId="[GlobalVariablesNamespace.GlobalVariables.reportId]" Status="Pass" StepDescription="User is logged in the System.!" StepName="User Logged in Succesfully" TakeScreenshot="False" TestId="[GlobalVariablesNamespace.GlobalVariables.testid]" />
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="StepStatus_2" ReportId="[reportId]" Status="Pass" StepDescription="User is logged in the System.!" StepName="User Logged in Succesfully" TakeScreenshot="False" TestId="[loginTest]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -285,7 +289,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_4" ReportId="[GlobalVariablesNamespace.GlobalVariables.reportId]" Status="Fail" StepDescription="Login Functionality Failed" StepName="Login Failed" TakeScreenshot="True" TestId="[GlobalVariablesNamespace.GlobalVariables.testid]" />
+              <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_4" ReportId="[reportId]" Status="Fail" StepDescription="Login Functionality Failed" StepName="Login Failed" TakeScreenshot="True" TestId="[loginTest]" />
               <Rethrow sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
             </Sequence>
           </ActivityAction>
@@ -301,7 +305,7 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ra:StartTest ContinueOnError="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="StartTest_2" Priority="Low" ReportId="[GlobalVariablesNamespace.GlobalVariables.reportId]" SuiteId="[GlobalVariablesNamespace.GlobalVariables.suiteId]" TagName="create-task" TestName="Create Task in CMS" testId="[GlobalVariablesNamespace.GlobalVariables.testid]" />
+    <ra:StartTest ContinueOnError="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="StartTest_2" Priority="Low" ReportId="[reportId]" SuiteId="[suiteId]" TagName="create-task" TestName="Create Task in CMS" testId="[createTask]" />
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,922.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
         <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="449.6,393.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
@@ -315,7 +319,7 @@
               <InArgument x:TypeArguments="ui:UiElement" x:Key="in_BrowserSession">[out_BrowserSession]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="StepStatus_3" ReportId="[GlobalVariablesNamespace.GlobalVariables.reportId]" Status="Pass" StepDescription="Task Created..!" StepName="Task is Created Succesfully" TakeScreenshot="False" TestId="[GlobalVariablesNamespace.GlobalVariables.testid]" />
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="StepStatus_3" ReportId="[reportId]" Status="Pass" StepDescription="Task Created..!" StepName="Task is Created Succesfully" TakeScreenshot="False" TestId="[createTask]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -330,7 +334,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_5" ReportId="[GlobalVariablesNamespace.GlobalVariables.reportId]" Status="Fail" StepDescription="Create Task is Failed" StepName="Create Task Failed" TakeScreenshot="True" TestId="[GlobalVariablesNamespace.GlobalVariables.testid]" />
+              <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_5" ReportId="[reportId]" Status="Fail" StepDescription="Create Task is Failed" StepName="Create Task Failed" TakeScreenshot="True" TestId="[createTask]" />
               <Rethrow sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
             </Sequence>
           </ActivityAction>
