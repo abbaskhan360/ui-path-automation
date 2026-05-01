@@ -33,8 +33,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.UIAutomationNext</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
@@ -130,6 +128,8 @@
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
       <x:String>UiPath.Testing.Enums</x:String>
       <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -233,7 +233,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="814,5132.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+  <Sequence sap:VirtualizedContainerService.HintSize="767.6,5132.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />

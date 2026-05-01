@@ -53,8 +53,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.UIAutomationNext</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
@@ -146,6 +144,8 @@
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>UiPath.Semantic.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -246,7 +246,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="814,2191.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
+  <Sequence sap:VirtualizedContainerService.HintSize="767.6,1647.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
@@ -263,19 +263,19 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="451.2,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_18" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(4)" sap:VirtualizedContainerService.HintSize="451.2,2089.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(4)" sap:VirtualizedContainerService.HintSize="451.2,1545.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1968" sap2010:WorkflowViewState.IdRef="Sequence_49">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1424" sap2010:WorkflowViewState.IdRef="Sequence_49">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL - 360factors.com" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_17" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
+            <uix:NGoToUrl DisplayName="Go To URL - 360factors.com" sap:VirtualizedContainerService.HintSize="416,78.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_17" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
               <uix:NGoToUrl.Url>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2160">
@@ -316,7 +316,7 @@
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
-            <uix:NHover DisplayName="Hover 'Incident'" sap:VirtualizedContainerService.HintSize="416,364" sap2010:WorkflowViewState.IdRef="NHover_17" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
+            <uix:NHover DisplayName="Hover 'Incident'" sap:VirtualizedContainerService.HintSize="416,110.4" sap2010:WorkflowViewState.IdRef="NHover_17" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
               <uix:NHover.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
                   <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_2164">
@@ -393,7 +393,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NHover.VerifyOptions>
             </uix:NHover>
-            <uix:NClick DisplayName="Click 'Issue Management'" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_127" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
+            <uix:NClick DisplayName="Click 'Issue Management'" sap:VirtualizedContainerService.HintSize="416,86.4" sap2010:WorkflowViewState.IdRef="NClick_127" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
                   <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_2168" Value="True">
@@ -487,8 +487,8 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_72" />
-            <uix:NGetText DisplayName="Get Text 'Create Issue Management'" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_18" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
+            <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="416,78.4" sap2010:WorkflowViewState.IdRef="Delay_72" />
+            <uix:NGetText DisplayName="Get Text 'Create Issue Management'" sap:VirtualizedContainerService.HintSize="416,78.4" sap2010:WorkflowViewState.IdRef="NGetText_18" ScopeIdentifier="d167ebe4-acbf-474b-bc58-e8a8666b1127" Version="V5">
               <uix:NGetText.HealingAgentBehavior>
                 <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
                   <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_2171">
@@ -573,7 +573,7 @@
                 </InArgument>
               </ui:IsMatch.TimeoutMS>
             </ui:IsMatch>
-            <ui:LogMessage DisplayName="Log 'Create Issue Management'" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_35">
+            <ui:LogMessage DisplayName="Log 'Create Issue Management'" sap:VirtualizedContainerService.HintSize="416,86.4" sap2010:WorkflowViewState.IdRef="LogMessage_35">
               <ui:LogMessage.Level>
                 <InArgument x:TypeArguments="ui:LogLevel">
                   <Literal x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="Literal`1_2175" Value="Info">
@@ -593,7 +593,7 @@
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
-            <Delay DisplayName="Delay before Summary" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_71">
+            <Delay DisplayName="Delay before Summary" sap:VirtualizedContainerService.HintSize="416,78.4" sap2010:WorkflowViewState.IdRef="Delay_71">
               <InArgument x:TypeArguments="x:TimeSpan">
                 <VisualBasicValue x:TypeArguments="x:TimeSpan" ExpressionText="TimeSpan.FromSeconds(2R)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_145">
                   <VisualBasicValue.Result>
@@ -606,11 +606,24 @@
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="ui:UiElement" x:Key="in_BrowserSession">[in_BrowserSession]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Update Parent Ticket" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="IssueManagementSingle\EditParentTicket.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Update Parent Ticket" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="IssueManagementSingle\EditParentTicket.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="ui:UiElement" x:Key="in_BrowserSession">[in_BrowserSession]</InArgument>
+                <OutArgument x:TypeArguments="x:Boolean" x:Key="parentTicketUpdated">[GlobalVariablesNamespace.GlobalVariables.parentTicketUpdated]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
           </Sequence>
         </ActivityAction>

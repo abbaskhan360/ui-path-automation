@@ -33,8 +33,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.UIAutomationNext</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
@@ -130,6 +128,8 @@
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
       <x:String>UiPath.Testing.Enums</x:String>
       <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -233,7 +233,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="814,6021.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+  <Sequence sap:VirtualizedContainerService.HintSize="767.6,6370.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
@@ -249,21 +249,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(3)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,5998.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_16" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" ScopeGuid="3f415668-4e83-4dc1-8a93-51ff914d907c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(3)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,6347.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_16" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" ScopeGuid="3f415668-4e83-4dc1-8a93-51ff914d907c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,5876.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,6225.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,5816.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,6165.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484.8,5280" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484.8,5628.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -490,25 +490,41 @@
                     </uix:NGetText.Target>
                   </uix:NGetText>
                   <ui:IsMatch BuilderPattern="&quot;In Process&quot;" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="451.2,92" sap2010:WorkflowViewState.IdRef="IsMatch_3" Input="[variable1]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;\&quot;In Process\&quot;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="In Process" RegexOption="Singleline" Result="[textMatchResult]" />
-                  <If Condition="[NOT textMatchResult]" sap:VirtualizedContainerService.HintSize="451.2,528.8" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[NOT textMatchResult]" sap:VirtualizedContainerService.HintSize="451.2,877.6" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,348" sap2010:WorkflowViewState.IdRef="Sequence_33">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Throw Exception="[New Exception(&quot;Assertion Failed - Status not Changed to In-Progress &quot; &amp; textMatchResult)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <Throw Exception="[New Exception(&quot;Assertion Failed - Status not Changed to In-Progress &quot; &amp; textMatchResult)]" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[GlobalVariablesNamespace.GlobalVariables.parentTicketUpdated]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                          </Assign.Value>
+                        </Assign>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_34">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Status Change to: &quot;+variable1]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Status Change to: &quot;+variable1]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[GlobalVariablesNamespace.GlobalVariables.parentTicketUpdated]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                          </Assign.Value>
+                        </Assign>
                       </Sequence>
                     </If.Else>
                   </If>
