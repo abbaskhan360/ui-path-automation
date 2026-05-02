@@ -1,0 +1,195 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ClickEditButton" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.Core;assembly=UiPath.Core" xmlns:uca="clr-namespace:UiPath.Core.Activities;assembly=UiPath.Core.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_TestSeriesName" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</VisualBasic.Settings>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>IssueManagement.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Click Edit for Test Series" sap:VirtualizedContainerService.HintSize="778.8000000000001,1412" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="var_RowFound" />
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="var_FormLoaded" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,1388.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0f289612-c08f-4444-8660-5eb19326447f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1195.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Actions Dropdown in Row (Click)" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f289612-c08f-4444-8660-5eb19326447f" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="acGcYVPFYEOoZ4ij6ubzNA" DesignTimeRectangle="1851, 382, 35, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' parentid='qaTestSeries' tag='BUTTON' type='button' /&gt;" Guid="36aff5b1-8988-4870-ac4b-2ab3dfc4c269" InformativeScreenshot="ccaae4b49a936f7425c5f8e3587e88c5.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/yr8Nyr29z0uRyo5sxAyNpA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f289612-c08f-4444-8660-5eb19326447f" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="VhyQXb4QGkqXidHGV3WWOQ" DesignTimeRectangle="1763, 413, 125, 31" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='dropdown-item' parentid='qaTestSeries' tag='A' /&gt;" Guid="33452a6c-7274-4d3e-816d-77dd584c4b55" InformativeScreenshot="92a7d16a036588411d794c4d4796240e.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/l8l5tMKPzUOYvCsPfHan3A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Clear QA Test Series" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="0f289612-c08f-4444-8660-5eb19326447f" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="el8LhaZn6Eqg6yMLuxx8YA" DesignTimeRectangle="819, 324, 600, 45" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='name' tag='INPUT' /&gt;" Guid="7046557e-bdb3-498f-9714-b108b7ca48a1" InformativeScreenshot="175dc4f4eb74e45299b8baf6bf0f6e40.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/w75psR0B9UuXPNAOTLz8sA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'QA Test Series'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="SameAsCard" ScopeIdentifier="0f289612-c08f-4444-8660-5eb19326447f" Text="[&quot;QA Test Series &quot; + DateTime.Now.ToString(&quot;yyyyMMddHHmmss&quot;) +&quot;-Updated&quot;]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="el8LhaZn6Eqg6yMLuxx8YA" DesignTimeRectangle="819, 324, 600, 45" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='name' tag='INPUT' /&gt;" Guid="7046557e-bdb3-498f-9714-b108b7ca48a1" InformativeScreenshot="175dc4f4eb74e45299b8baf6bf0f6e40.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/w75psR0B9UuXPNAOTLz8sA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,256.8" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f289612-c08f-4444-8660-5eb19326447f" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="hNQBDLtkp0qd-swyB6bf3g" DesignTimeRectangle="1265, 850, 74, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='saveButton' tag='A' /&gt;" Guid="0e7dd14e-ddfe-4c7d-bf1f-e3a08eb55bec" InformativeScreenshot="b268769ec6ce5f1b59ce1917df7d463b.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/o9N9RNaYkUisRCTetW7jgA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="wU8tDGbRqU2_dlM-SFEKIg" DesignTimeRectangle="1520, 175, 375, 90" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='toast-container' tag='DIV' /&gt;" Guid="54be4d30-0068-4eba-9225-542e8c55cd86" InformativeScreenshot="a59dbd139cf5d6ef3a9405ae779eb869.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/APSGO4x9VUKpoKV_b4aO3Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" ContentHash="Vlm1zp7ndUyPCSS-mBcJqA" IconBase64="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" InformativeScreenshot="9c6afe9937150ce43139d8dee7064089.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/3-dPX9jz7kuU3Z2wovdVPA" Selector="&lt;html app='chrome.exe' title='Predict 360' /&gt;" Url="https://stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
