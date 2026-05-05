@@ -1,10 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_BrowserSession" Type="OutArgument(ui:UiElement)" />
   </x:Members>
-  <this:Main.out_BrowserSession>
-    <OutArgument x:TypeArguments="ui:UiElement" />
-  </this:Main.out_BrowserSession>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -243,7 +240,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="767.6,6866.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap:VirtualizedContainerService.HintSize="866.4000000000001,6885.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="startTime" />
       <Variable x:TypeArguments="ui:CurrentJobInfo" Name="" />
@@ -262,81 +259,86 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="588.8,166.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="./Reports" ReportName="Issue Management Report" isCreated="[reportId]" />
-    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="588.8,117.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" ReportId="[reportId]" SuiteName="Issue Management Suit" suiteId="[suiteId]" />
-    <Sequence DisplayName="Issue Management - Main Workflow" sap:VirtualizedContainerService.HintSize="588.8,6559.2" sap2010:WorkflowViewState.IdRef="Sequence_MainWorkflow">
+    <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="688,166.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="./Reports" ReportName="Issue Management Report" isCreated="[reportId]" />
+    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="688,117.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" ReportId="[reportId]" SuiteName="Issue Management Suit" suiteId="[suiteId]" />
+    <Sequence DisplayName="Issue Management - Main Workflow" sap:VirtualizedContainerService.HintSize="688,6578.4" sap2010:WorkflowViewState.IdRef="Sequence_MainWorkflow">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Login section" sap:VirtualizedContainerService.HintSize="555.2,1742.4" sap2010:WorkflowViewState.IdRef="Sequence_Login">
+      <Sequence DisplayName="Login section" sap:VirtualizedContainerService.HintSize="654.4,1959.2" sap2010:WorkflowViewState.IdRef="Sequence_Login">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="486.4,117.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[reportId]" SuiteId="[suiteId]" TestName="Login Test" testId="[loginTest]" />
-        <TryCatch DisplayName="Try-Catch block for Login.xaml" sap:VirtualizedContainerService.HintSize="486.4,1532.8" sap2010:WorkflowViewState.IdRef="TryCatch_Login">
+        <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="520,117.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[reportId]" SuiteId="[suiteId]" TestName="Login Test" testId="[loginTest]" />
+        <TryCatch DisplayName="Try-Catch block for Login.xaml" sap:VirtualizedContainerService.HintSize="520,1749.6" sap2010:WorkflowViewState.IdRef="TryCatch_Login">
           <TryCatch.Try>
-            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="484.8,1008" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="483.2,1008" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="451.2,265.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_Login" UnSafe="False" WorkflowFileName="Login.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="449.6,233.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_Login" UnSafe="False" WorkflowFileName="Login.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_BrowserSession">[out_BrowserSession]</OutArgument>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="loginTestPassed">[GlobalVariablesNamespace.GlobalVariables.loginTestPassed]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <If Condition="[Not GlobalVariablesNamespace.GlobalVariables.loginTestPassed]" sap:VirtualizedContainerService.HintSize="451.2,682.4" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[Not GlobalVariablesNamespace.GlobalVariables.loginTestPassed]" sap:VirtualizedContainerService.HintSize="449.6,714.4" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,335.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,335.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_9" ReportId="[reportId]" Status="Fail" StepDescription="Login Test is Failed" StepName="Login Test Failed" TakeScreenshot="True" TestId="[loginTest]" />
-                    <ra:LogMessage ContinueOnError="{x:Null}" Text="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="Unable to Login with Credentials..!" MessageType="Info" ReportId="[reportId]" TestId="[loginTest]" />
+                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="382.4,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_9" ReportId="[reportId]" Status="Fail" StepDescription="Login Test is Failed" StepName="Login Test Failed" TakeScreenshot="True" TestId="[loginTest]" />
+                    <ra:LogMessage ContinueOnError="{x:Null}" Text="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="Unable to Login with Credentials..!" MessageType="Info" ReportId="[reportId]" TestId="[loginTest]" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,217.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,217.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="416,157.6" sap2010:WorkflowViewState.IdRef="StepStatus_1" ReportId="[reportId]" Status="Pass" StepDescription="Login Test is Passed" StepName="Login Test Passed" TakeScreenshot="False" TestId="[loginTest]" />
+                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="382.4,157.6" sap2010:WorkflowViewState.IdRef="StepStatus_1" ReportId="[reportId]" Status="Pass" StepDescription="Login Test is Passed" StepName="Login Test Passed" TakeScreenshot="False" TestId="[loginTest]" />
                   </Sequence>
                 </If.Else>
               </If>
             </Sequence>
           </TryCatch.Try>
           <TryCatch.Catches>
-            <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="486.4,406.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <ActivityAction x:TypeArguments="s:Exception">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,335.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,335.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="451.2,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_2" ReportId="[reportId]" Status="Fail" StepDescription="Showing Some Exeption Errors on Login" StepName="Exceptions Found in Login Functionality" TakeScreenshot="True" TestId="[loginTest]" />
-                  <ra:LogMessage ContinueOnError="{x:Null}" Text="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="Some Exceptions Found in Login Functionality" MessageType="Info" ReportId="[reportId]" TestId="[loginTest]" />
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="382.4,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_2" ReportId="[reportId]" Status="Fail" StepDescription="Showing Some Exeption Errors on Login" StepName="Exceptions Found in Login Functionality" TakeScreenshot="True" TestId="[loginTest]" />
+                  <ra:LogMessage ContinueOnError="{x:Null}" Text="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="Some Exceptions Found in Login Functionality" MessageType="Info" ReportId="[reportId]" TestId="[loginTest]" />
                 </Sequence>
               </ActivityAction>
             </Catch>
           </TryCatch.Catches>
           <TryCatch.Finally>
-            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484.8,24.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -347,47 +349,47 @@
           </TryCatch.Finally>
         </TryCatch>
       </Sequence>
-      <Sequence DisplayName="ParentTicket section" sap:VirtualizedContainerService.HintSize="555.2,2388.8" sap2010:WorkflowViewState.IdRef="Sequence_ParentTicket">
+      <Sequence DisplayName="ParentTicket section" sap:VirtualizedContainerService.HintSize="654.4,2191.2" sap2010:WorkflowViewState.IdRef="Sequence_ParentTicket">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="521.6,117.6" sap2010:WorkflowViewState.IdRef="StartTest_2" Priority="Low" ReportId="[reportId]" SuiteId="[suiteId]" TestName="Create and Update Parent Ticket" testId="[parentTicketCase]" />
-        <TryCatch DisplayName="Try-Catch block for ParentTicket.xaml" sap:VirtualizedContainerService.HintSize="521.6,2179.2" sap2010:WorkflowViewState.IdRef="TryCatch_ParentTicket">
+        <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="620.8,117.6" sap2010:WorkflowViewState.IdRef="StartTest_2" Priority="Low" ReportId="[reportId]" SuiteId="[suiteId]" TestName="Create and Update Parent Ticket" testId="[parentTicketCase]" />
+        <TryCatch DisplayName="Try-Catch block for ParentTicket.xaml" sap:VirtualizedContainerService.HintSize="620.8,1981.6" sap2010:WorkflowViewState.IdRef="TryCatch_ParentTicket">
           <TryCatch.Try>
-            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="520,1532.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="584,1596.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[Not GlobalVariablesNamespace.GlobalVariables.loginTestPassed]" sap:VirtualizedContainerService.HintSize="486.4,1472.8" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[Not GlobalVariablesNamespace.GlobalVariables.loginTestPassed]" sap:VirtualizedContainerService.HintSize="550.4,1536.8" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,335.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,335.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="451.2,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_11" ReportId="[reportId]" Status="Fail" StepDescription="As User not Logged in Unable to Navigate to CMS" StepName="Login Test was Failed - Not Navigated to CMS" TakeScreenshot="True" TestId="[parentTicketCase]" />
-                    <ra:LogMessage ContinueOnError="{x:Null}" Text="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="Check Login First, Login Failed therefore unable to Navigate to CMS" MessageType="Info" ReportId="[reportId]" TestId="[loginTest]" />
+                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="382.4,166.4" sap2010:WorkflowViewState.IdRef="StepStatus_11" ReportId="[reportId]" Status="Fail" StepDescription="As User not Logged in Unable to Navigate to CMS" StepName="Login Test was Failed - Not Navigated to CMS" TakeScreenshot="True" TestId="[parentTicketCase]" />
+                    <ra:LogMessage ContinueOnError="{x:Null}" Text="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="Check Login First, Login Failed therefore unable to Navigate to CMS" MessageType="Info" ReportId="[reportId]" TestId="[loginTest]" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,1008" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="516.8,1040" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke ParentTicket workflow" sap:VirtualizedContainerService.HintSize="451.2,265.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_ParentTicket" UnSafe="False" WorkflowFileName="IssueManagementSingle\ParentTicket.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke ParentTicket workflow" sap:VirtualizedContainerService.HintSize="483.2,265.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_ParentTicket" UnSafe="False" WorkflowFileName="IssueManagementSingle\ParentTicket.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="ui:UiElement" x:Key="in_BrowserSession">[out_BrowserSession]</InArgument>
                         <OutArgument x:TypeArguments="x:Boolean" x:Key="parentTicketUpdated">[GlobalVariablesNamespace.GlobalVariables.parentTicketUpdated]</OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
-                    <If Condition="[Not GlobalVariablesNamespace.GlobalVariables.parentTicketUpdated]" sap:VirtualizedContainerService.HintSize="451.2,682.4" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[Not GlobalVariablesNamespace.GlobalVariables.parentTicketUpdated]" sap:VirtualizedContainerService.HintSize="483.2,714.4" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,335.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
