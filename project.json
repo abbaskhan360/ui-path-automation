@@ -102,6 +102,12 @@
       "uniqueId": "e37f529d-76ba-4341-ac5f-dbc1973a00e1",
       "input": [],
       "output": []
+    },
+    {
+      "filePath": "TaskManagement\\TaskMain.xaml",
+      "uniqueId": "0b4a4d90-e6c4-49a3-934a-df87e6fef125",
+      "input": [],
+      "output": []
     }
   ],
   "isTemplate": false,

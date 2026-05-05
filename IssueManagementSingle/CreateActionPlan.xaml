@@ -253,7 +253,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="814,3450.4" sap2010:WorkflowViewState.IdRef="Sequence_37">
+  <Sequence sap:VirtualizedContainerService.HintSize="710,3572.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="WSSessionData" />
       <Variable x:TypeArguments="ui:UiElement" Name="outputElement" />
@@ -270,19 +270,19 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="451.2,78.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_4" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(3)" sap:VirtualizedContainerService.HintSize="451.2,3348.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(3)" sap:VirtualizedContainerService.HintSize="451.2,3471.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InUiElement="[in_BrowserSession]" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,3227.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,3349.6" sap2010:WorkflowViewState.IdRef="Sequence_36">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick DisplayName="Click ''Create Action Plan''" sap:VirtualizedContainerService.HintSize="416,86.4" sap2010:WorkflowViewState.IdRef="NClick_53" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
+            <uix:NClick DisplayName="Click ''Create Action Plan''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_53" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
                   <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_432" Value="True" />
@@ -431,6 +431,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
             <uix:NClick DisplayName="Click ''Action Plan''" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_54" ScopeIdentifier="d8e44e03-d134-4f4c-8f0e-f2b6df4c6733" Version="V5">
               <uix:NClick.ActivateBefore>
                 <InArgument x:TypeArguments="x:Boolean">
