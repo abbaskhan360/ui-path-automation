@@ -59,7 +59,7 @@
       <AssemblyReference>IssueManagement.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="QA_Test_Series" sap:VirtualizedContainerService.HintSize="778.8000000000001,894.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="QA_Test_Series" sap:VirtualizedContainerService.HintSize="778.8000000000001,1070.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -84,9 +84,14 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_LawRegulation" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="EditWorkflow - Invoke Workflow File (QA Test Series\Workflows\PageActions\EditWorkflow.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="QA Test Series\Workflows\PageActions\DeployWorkflow.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="EditWorkflow - Invoke Workflow File (QA Test Series\Workflows\PageActions\EditWorkflow.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="QA Test Series\Workflows\PageActions\EditWorkflow.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_TestSeriesName" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CloseMemo - Invoke Workflow File (QA Test Series\Workflows\PageActions\CloseMemo.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="QA Test Series\Workflows\PageActions\CloseMemo.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DeployWorkflow - Invoke Workflow File (QA Test Series\Workflows\PageActions\DeployWorkflow.xaml)" sap:VirtualizedContainerService.HintSize="449.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="QA Test Series\Workflows\PageActions\DeployWorkflow.xaml">
