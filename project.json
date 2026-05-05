@@ -4,6 +4,7 @@
   "description": "IssueManagementWorkflows",
   "main": "IssueManagementSingle\\Main.xaml",
   "dependencies": {
+    "ReporterForUiPath.Activities": "[3.0.1]",
     "UiPath.System.Activities": "[26.2.4]",
     "UiPath.Testing.Activities": "[25.10.1]",
     "UiPath.UIAutomation.Activities": "[25.10.30]"
@@ -40,7 +41,16 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "0aca192f-a5de-456a-89ee-69c0ac54b0e3",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TaskManagement\\TaskMain.xaml"
+      }
+    ],
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
@@ -76,12 +86,6 @@
       "output": []
     },
     {
-      "filePath": "IssueManagementSingle\\GenerateHtmlReport.cs",
-      "uniqueId": "98040406-6ec7-4209-a8f6-fac40e59ab37",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "IssueManagementSingle\\Main.xaml",
       "uniqueId": "4954e1b6-831c-4373-abcc-9cbe33bd1c32",
       "input": [],
@@ -90,12 +94,6 @@
     {
       "filePath": "IssueManagementSingle\\ParentTicket.xaml",
       "uniqueId": "5dfb1d6e-5786-4f03-8ec8-3f021a8b9841",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "TaskManagement\\TaskMain.xaml",
-      "uniqueId": "31b82a44-aca4-4833-a412-c576111fb15a",
       "input": [],
       "output": []
     },
