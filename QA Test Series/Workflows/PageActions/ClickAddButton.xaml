@@ -77,31 +77,31 @@
       <AssemblyReference>IssueManagement.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Click Add QA Test Series Button" sap:VirtualizedContainerService.HintSize="778.8000000000001,1768.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Click Add QA Test Series Button" sap:VirtualizedContainerService.HintSize="778.8000000000001,1592" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Login - Invoke Workflow File (QA Test Series\Workflows\Common\Login.xaml)" sap:VirtualizedContainerService.HintSize="451.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="QA Test Series\Workflows\Common\Login.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login - Invoke Workflow File (QA Test Series\Workflows\Common\Login.xaml)" sap:VirtualizedContainerService.HintSize="451.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="QA Test Series\Workflows\Common\Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_BrowserSession" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Predict 360(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,1569.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome Predict 360(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,1392.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1376" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1199.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add' Button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,265.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Version="V5">
+            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Add' Button" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,265.6" sap2010:WorkflowViewState.IdRef="NClick_2" InUiElement="{x:Null}" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="Z8eDzbw1e02GsTstHy8_2A" DesignTimeRectangle="1804, 230, 97, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname=' &amp;#x9;                        &amp;#x9;&amp;#x9; &amp;#x9;                        &amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;                        &amp;#x9;&amp;#x9;&amp;#x9;Add &amp;#x9;                        &amp;#x9;&amp;#x9; &amp;#x9;                        &amp;#x9;' tag='A' /&gt;" Guid="8ee6ef1d-4b81-44ed-9abc-b046caa4fc7a" InformativeScreenshot="9e3b8a33217109d24dbe814fed4e595b.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/WBac1i3vM0OT6Kd57xzAfg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
@@ -119,7 +119,8 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="[UiPath.UIAutomationNext.Enums.NScrollDirection.Down]" DisplayName="Mouse Scroll 'Business Unit(s) '" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,386.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Version="V5">
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+            <uix:NMouseScroll ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Direction="[UiPath.UIAutomationNext.Enums.NScrollDirection.Down]" DisplayName="Mouse Scroll 'Business Unit(s) '" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,386.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InUiElement="{x:Null}" InteractionMode="HardwareEvents" KeyModifiers="{x:Null}" MovementUnits="10" OutUiElement="{x:Null}" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Timeout="{x:Null}" Version="V5">
               <uix:NMouseScroll.SearchedElement>
                 <uix:SearchedElement>
                   <uix:SearchedElement.InUiElement>
@@ -140,7 +141,7 @@
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="6cb9nMfj8k-E-a2ekz6ZnQ" DesignTimeRectangle="469, 293, 1000, 525" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='modal-body' parentid='qaTestSeriesForm' tag='DIV' /&gt;" Guid="8ec6b2f9-f826-4f30-a90a-d9b83fbb3706" InformativeScreenshot="0d9b6e0ea8cca426868a688c136469f1.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/t_qQJjwI2kW9ErCWDOQlwQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NMouseScroll.Target>
             </uix:NMouseScroll>
-            <uix:NGetText DisplayName="Validate Business Unit" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Version="V5">
+            <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Validate Business Unit" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,78.4" sap2010:WorkflowViewState.IdRef="NGetText_1" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" ScrapingOptions="{x:Null}" TextString="{x:Null}" Timeout="{x:Null}" Version="V5" WordsInfo="{x:Null}">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="IqW3dDNTzUSgSulz3CcOlA" DesignTimeRectangle="482, 434, 318, 101" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='qaTestSeriesForm' tag='LABEL' type='' class='col-md-4 col-form-label' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="687eb6e1-7e20-4e93-8b6a-90dc1a21a5e4" InformativeScreenshot="649028596deaee17a84acf10819d4ac7.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/CVfGo1SKPUK5oB7f68_Gew" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -152,7 +153,7 @@
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Validate Law/Regulation" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Version="V5">
+            <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Validate Law/Regulation" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,78.4" sap2010:WorkflowViewState.IdRef="NGetText_3" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" ScrapingOptions="{x:Null}" TextString="{x:Null}" Timeout="{x:Null}" Version="V5" WordsInfo="{x:Null}">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="IK4GU2bQVEqw89XEmUUKFQ" DesignTimeRectangle="482, 739, 318, 47" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='qaTestSeriesForm' tag='LABEL' type='' class='col-md-4 col-form-label' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="ba159e9d-6d7f-4122-94a9-52db088e0535" InformativeScreenshot="15aa02d5d9eace6626454f0ad086468f.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/otftaybh8UyIjpp0iMDOUw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -163,7 +164,7 @@
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,256.8" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Version="V5">
+            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,85.6" sap2010:WorkflowViewState.IdRef="NClick_6" InUiElement="{x:Null}" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="d58fc3cf-3474-40cb-b455-775a84b4ebd3" Timeout="{x:Null}" UnblockInput="{x:Null}" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="stage.360factors.com/predict360/web/qaTestSeries/qaTestSeries" ContentHash="hNQBDLtkp0qd-swyB6bf3g" DesignTimeRectangle="1265, 850, 74, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='saveButton' tag='A' /&gt;" Guid="0e7dd14e-ddfe-4c7d-bf1f-e3a08eb55bec" InformativeScreenshot="b268769ec6ce5f1b59ce1917df7d463b.jpg" Reference="5sG-IQmD4EWeGqcUNSthaw/o9N9RNaYkUisRCTetW7jgA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Predict 360' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>

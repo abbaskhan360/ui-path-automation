@@ -2,7 +2,7 @@
   "name": "IssueManagement",
   "projectId": "21ab9f88-79e5-4a5d-8a8d-fe5f47f65cfe",
   "description": "IssueManagementWorkflows",
-  "main": "IssueManagementSingle\\Main.xaml",
+  "main": "QA Test Series\\Workflows\\TestCases\\QA Test Series.xaml",
   "dependencies": {
     "ReporterForUiPath.Activities": "[3.0.1]",
     "UiPath.System.Activities": "[26.2.4]",
@@ -100,6 +100,12 @@
     {
       "filePath": "TaskManagement\\CreateTask.xaml",
       "uniqueId": "e37f529d-76ba-4341-ac5f-dbc1973a00e1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "QA Test Series\\Workflows\\TestCases\\QA Test Series.xaml",
+      "uniqueId": "94b88ae6-19ae-47fc-815a-d7d7e9b9d080",
       "input": [],
       "output": []
     }

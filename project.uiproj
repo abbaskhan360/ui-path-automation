@@ -2,5 +2,5 @@
   "Name": "IssueManagement",
   "ProjectType": "Process",
   "Description": "IssueManagementWorkflows",
-  "MainFile": "IssueManagementSingle\\Main.xaml"
+  "MainFile": "QA Test Series\\Workflows\\TestCases\\QA Test Series.xaml"
 }
